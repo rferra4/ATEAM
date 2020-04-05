@@ -16,6 +16,13 @@ CREATE TABLE `Applicants` (
   `StatusOfApplication` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `Applicants`
+--
+
+INSERT INTO `Applicants` (`Applicants_ID`, `Name`, `Last_Name`, `Resume`, `StatusOfApplication`) VALUES
+(1, 'Rachel', 'Ferrara', 'Hi my name is Rachel ', 'Submitted');
+
 -- --------------------------------------------------------
 
 --
@@ -62,7 +69,7 @@ INSERT INTO `Company` (`ID_Number`, `Name`, `Address`, `Description`, `Employee_
 CREATE TABLE `Employee` (
   `Employee_ID` int(50) NOT NULL,
   `Name` varchar(50) NOT NULL,
-  `Last_Name` int(50) NOT NULL,
+  `Last_Name` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -151,7 +158,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `Association`
