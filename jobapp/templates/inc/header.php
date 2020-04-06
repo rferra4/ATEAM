@@ -12,7 +12,9 @@
           <ul class="nav nav-pills float-right">
             <li class="nav-item"><a class="nav-link active" href="index.php">Home </a></li>
             <li class="nav-item"><a class="nav-link" href="create.php">Create Listing</a></li>
-            <li class="nav-item"><a class="nav-link" href="sign_up.php">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="login_page/login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="login_page/register.html">Register</a></li>
+
 
 
           </ul>
