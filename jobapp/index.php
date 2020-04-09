@@ -8,15 +8,15 @@ $template = new Template('templates/frontpage.php');
 $category = isset($_GET['category']) ? $_GET['category'] : null;
 
 if($category){
-    $template->jobs = $job->getByCategory($category);
+    $template->Job_Opening = $job->getByCategory($category);
 
 
 }else{
     $template->title = 'Latest Jobs ';
-    $template->jobs = $job->getAllJobs();
+    $template->Job_Opening = $job->getAllJobs();
 }
 
 
-$template->categories = $job->getCategories();
+$template->Company = $job->getCategories();
 
 echo $template;
