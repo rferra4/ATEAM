@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 08, 2020 at 10:52 PM
+-- Generation Time: Apr 14, 2020 at 12:22 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -110,7 +110,9 @@ INSERT INTO `Employee` (`Employee_ID`, `username`, `password`, `First_Name`, `La
 (6, 'tester', 'f5d1278e8109edd94e1e4197e04873b9', 'tester', 'tester', 'tester@gmail.com', '2020-04-07 01:23:30'),
 (7, '', '', 'Sim', 'Thapa', 'ST@gmail.com', NULL),
 (8, '', '', 'Santi', 'Salas', 'st@hotmail.com', NULL),
-(9, 'phil', 'd14ffd41334ec4b4b3f2c0d55c38be6f', 'phil', 'phil', 'p@gmail.com', '2020-04-08 22:42:18');
+(9, 'phil', 'd14ffd41334ec4b4b3f2c0d55c38be6f', 'phil', 'phil', 'p@gmail.com', '2020-04-08 22:42:18'),
+(11, 'one', 'f97c5d29941bfb1b2fdab0874906ab82', 'one', 'one', 'one@gmail.com', '2020-04-09 01:00:47'),
+(12, 'r', '4b43b0aee35624cd95b910189b3dc231', 'r', 'r', 'r', '2020-04-09 01:56:15');
 
 -- --------------------------------------------------------
 
@@ -225,13 +227,13 @@ ALTER TABLE `Company`
 -- AUTO_INCREMENT for table `Employee`
 --
 ALTER TABLE `Employee`
-  MODIFY `Employee_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Employee_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `Job_Opening`
 --
 ALTER TABLE `Job_Opening`
-  MODIFY `Opening_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `Opening_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `Search_Committee`
