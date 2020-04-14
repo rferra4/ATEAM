@@ -1,9 +1,7 @@
                 <footer class="footer">
-        <p>&copy; JobBoard </p>
+        <p>&copy; Job Board </p>
       </footer>
 
     </div> <!-- /container -->
         </body>
 </html>
-
-
