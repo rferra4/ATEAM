@@ -3,7 +3,7 @@
 <?php
 $job = new Job;
 
-$template = new Template('templates/frontpage.php');
+$template = new Template('templates/view_listings.php');
 
 $category = isset($_GET['category']) ? $_GET['category'] : null;
 
