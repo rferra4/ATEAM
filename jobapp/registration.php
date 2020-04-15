@@ -22,7 +22,7 @@
         $username = mysqli_real_escape_string($con, $username);
         $email    = stripslashes($_REQUEST['email']);
         $email    = mysqli_real_escape_string($con, $email);
-        
+
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
         $create_datetime = date("Y-m-d H:i:s");
@@ -42,9 +42,9 @@
         }
     } else {
 ?>
-    
+
     <div class="hero">
-        
+
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
@@ -59,14 +59,14 @@
             <!--Last Name Input Box-->
             <input type="text" class="input-field" placeholder="Last Name" name="Last_Name" >
             <input type="text" class="input-field" name="username" placeholder="Username" required />
-            
+
             <!--Email Input Box -->
-            <input type="text" class="input-field" placeholder="Email" name="email" > 
+            <input type="text" class="input-field" placeholder="Email" name="email" >
             <!--Password Input Box -->
             <input type="password" class="input-field" placeholder="Enter Password" value="" name="password" >
             <!--Option to add confirm password field
-            <input type="password" class="input-field" placeholder="Confirm Password" value="" name="employee_cpassword" id="employee_cpassword" required> 
-            
+            <input type="password" class="input-field" placeholder="Confirm Password" value="" name="employee_cpassword" id="employee_cpassword" required>
+
             <!--Upload Resume Button -->
             <input class="resume-btn" type="file" name="resume" hidden="hidden">
             <button class="resume-btn" type="button" >Upload Resume</button>
@@ -77,7 +77,7 @@
 
             <p class="link">Already have an account? <a href="login.php">Login here</a></p>
         </form>
-            
+
         <!--HIRER Registration Form -->
         <form id="HIRER"class="input-group" action="" method="post">
             <h3 class="input-field-title">Register as Hirer</h3>
@@ -98,41 +98,41 @@
             <p class="link">Already have an account? <a href="login.php">Login here</a></p>
         </form>
         </div>
-        
-        
+
+
     </div>
-    
-    
+
+
     <!--Script for switching between Employee and Hirer tabs -->
     <script>
     var x = document.getElementById("EMPLOYEE");
     var y = document.getElementById("HIRER");
     var z = document.getElementById("btn");
-    
+
     function register(){
         x.style.left = "-400px";
         y.style.left = "50px";
         z.style.left = "110px";
-    }        
+    }
     function login(){
         x.style.left = "50px";
         y.style.left = "450px";
         z.style.left = "0";
     }
-        
+
     </script>
-    
+
     <!--Script for showing the chosen file for the upload resume button -->
     <!--this script return the given file name without including the path-->
     <script type="text/javascript">
         const resumeFile = document.getElementById("resume");
         const resumeBtn = document.getElementById("resume_button");
         const customText = document.getElementById("custom-text");
-        
+
         resumeBtn.addEventListener("click", function(){
             resumeFile.click();
         });
-        
+
         resumeFile.addEventListener("change", function(){
             if(resumeFile.value){
                 customText.innerHTML = resumeFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
@@ -140,9 +140,9 @@
                 customText.innerHTML = "No file chosen, yet."
             }
         });
-        
+
     </script>
-    
+
 <?php
     }
 ?>

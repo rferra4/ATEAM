@@ -13,7 +13,7 @@
             <li class="nav-item"><a class="nav-link active" href="index.php">Home </a></li>
             <li class="nav-item"><a class="nav-link" href="create.php">Create Listing</a></li>
             <li class="nav-item"><a class="nav-link" href="registration.php">Sign Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 
 
 
