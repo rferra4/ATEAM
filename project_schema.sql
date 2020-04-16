@@ -240,3 +240,46 @@ ALTER TABLE `Job_Opening`
 --
 ALTER TABLE `Search_Committee`
   MODIFY `SearchCommittee_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
+  
+ 
+--
+-- Table structure for table `masterlogin`
+--
+
+CREATE TABLE `masterlogin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(15) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `role` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `masterlogin`
+--
+
+INSERT INTO `masterlogin` (`id`, `username`, `email`, `password`, `role`) VALUES
+(11, 'ateam', 'ateam@gmail.com', '123456', 'admin'),
+(12, 'rachel', 'rachel@gmail.com', '1234567', 'employee');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `masterlogin`
+--
+ALTER TABLE `masterlogin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `masterlogin`
+--
+ALTER TABLE `masterlogin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
