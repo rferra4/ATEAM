@@ -1,5 +1,5 @@
                 <footer class="footer">
-        <p>&copy; Job Board </p>
+        <p>&copy; Job Portal </p>
       </footer>
 
     </div> <!-- /container -->

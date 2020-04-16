@@ -1,8 +1,10 @@
+<?php include_once '../config/init.php'; ?>
+
+<?php include '../templates/inc/user_page.php'; ?>
 <center>
  <h1>User Page</h1>
-
- <h3>
- <?php
+<h3>
+<?php
 
  session_start();
 
@@ -24,11 +26,15 @@
  if(isset($_SESSION['user_login']))
  {
  ?>
+
   Welcome,
  <?php
   echo $_SESSION['user_login'];
+
  }
+
  ?>
+
  </h3>
   <a href="../logout.php">Logout</a>
 </center>

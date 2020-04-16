@@ -1,3 +1,6 @@
+<?php include_once 'config/init.php'; ?>
+
+<?php include '/templates/inc/main_page.php'; ?>
 <link rel="stylesheet" href="css/style.css"/>
 
 <?php
