@@ -12,13 +12,9 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills float-right">
-            <li class="nav-item"><a class="nav-link active" href="">Home </a></li>
-            <li class="nav-item"><a class="nav-link" href="register.php">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link active" href="user/user_home.php">Home </a></li>
             <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
-
-
-
-
+            <li class="nav-item"><a class="nav-link" href="../viewer.php">Job Openings</a></li>
 
           </ul>
         </nav>
