@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/style.css"/>
+
 <?php
 require_once 'connection.php';
 
@@ -106,44 +108,20 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
 }
 ?>
 
-<form method="post" class="form-horizontal">
-
- <div class="form-group">
- <label class="col-sm-3 control-label">Email</label>
- <div class="col-sm-6">
- <input type="text" name="txt_email" class="form-control" placeholder="enter email" />
- </div>
- </div>
-
- <div class="form-group">
- <label class="col-sm-3 control-label">Password</label>
- <div class="col-sm-6">
- <input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
- </div>
- </div>
-
- <div class="form-group">
- <label class="col-sm-3 control-label">Select Type</label>
- <div class="col-sm-6">
-  <select class="form-control" name="txt_role">
+<form class="form" method="post" name="login">
+  <h1 class="login-title">Login</h1>
+  <input type="text" class="login-input" name="txt_email" placeholder="enter email" autofocus="true"/>
+  <input type="password" class="login-input" name="txt_password" placeholder="enter passowrd" autofocus="true"/>
+  <select class="login-input" name="txt_role">
    <option value="" selected="selected"> - select role - </option>
    <option value="admin">Admin</option>
    <option value="employee">Employee</option>
    <option value="user">User</option>
   </select>
- </div>
- </div>
 
- <div class="form-group">
- <div class="col-sm-offset-3 col-sm-9 m-t-15">
- <input type="submit" name="btn_login" class="btn btn-success" value="Login">
- </div>
- </div>
 
- <div class="form-group">
- <div class="col-sm-offset-3 col-sm-9 m-t-15">
- You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>
- </div>
- </div>
+ <input type="submit" name="btn_login" class="login-button" value="Login">
+ <p class="link"> Don't have an account? <a href="register.php">Sign Up</a></p>
+
 
 </form>

@@ -1,5 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
 
+<?php
 require_once "connection.php";
 
 if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set this
@@ -67,50 +75,36 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
  }
 }
 ?>
-<form method="post" class="form-horizontal">
+<div class="hero">
+  <div class="form-box">
+    <div class="button-box">
+                <div id="btn"></div>
 
- <div class="form-group">
- <label class="col-sm-3 control-label">Userame</label>
- <div class="col-sm-6">
- <input type="text" name="txt_username" class="form-control" placeholder="enter username" />
- </div>
- </div>
+            </div>
 
- <div class="form-group">
- <label class="col-sm-3 control-label">Email</label>
- <div class="col-sm-6">
- <input type="text" name="txt_email" class="form-control" placeholder="enter email" />
- </div>
- </div>
+<form id = "LOGIN" class = "input-group" method="post" >
+<h3 class="input-field-title">Register</h3>
+ <input type="text" name="txt_username" class="input-field" placeholder="enter username" />
 
- <div class="form-group">
- <label class="col-sm-3 control-label">Password</label>
- <div class="col-sm-6">
- <input type="password" name="txt_password" class="form-control" placeholder="enter passowrd" />
- </div>
- </div>
 
- <div class="form-group">
- <label class="col-sm-3 control-label">Select Type</label>
- <div class="col-sm-6">
-  <select class="form-control" name="txt_role">
+ <input type="text" name="txt_email" class="input-field" placeholder="enter email" />
+
+ <input type="password" name="txt_password" class="input-field" placeholder="enter passowrd" />
+
+  <select class="input-field" name="txt_role">
    <option value="" selected="selected"> - select role - </option>
    <option value="employee">Employee</option>
    <option value="user">User</option>
   </select>
- </div>
- </div>
+  <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
 
- <div class="form-group">
- <div class="col-sm-offset-3 col-sm-9 m-t-15">
- <input type="submit"  name="btn_register" class="btn btn-primary " value="Register">
- </div>
- </div>
 
- <div class="form-group">
- <div class="col-sm-offset-3 col-sm-9 m-t-15">
- You have a account register here? <a href="index.php"><p class="text-info">Login Account</p></a>
- </div>
- </div>
+ <input type="submit"  name="btn_register" class="submit-btn" value="Register">
+
+ <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
+</div>
+</div>
 
 </form>
+</body>
+</html>
