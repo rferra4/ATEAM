@@ -1,6 +1,6 @@
 <?php include_once '../config/init.php'; ?>
 
-<?php include 'inc/header.php'; ?>
+<?php include 'inc/user_page.php'; ?>
       <div class="jumbotron">
         <h1 class="display-4">Find Your Dream Job</h1>
         <form>

@@ -36,5 +36,4 @@
  ?>
 
  </h3>
-  <a href="../logout.php">Logout</a>
 </center>
