@@ -7,18 +7,9 @@
 </div>
 
 
-<head>
-<title>Upload your files</title>
-</head>
-<body>
-<form enctype="multipart/form-data" action="upload.php" method="POST">
-  <p>Upload your file</p>
-  <input type="file" name="file"></input><br />
-  <input type="submit" value="Upload" name = "upload"></input>
-</form>
-</body>
-</html>
-
+<div class = "col-md-2">
+        <a class = "btn btn-default" href = "templates/apply.php">APPLY HERE</a>
+</div>
 
 
 <?php echo $job->Title; ?>
