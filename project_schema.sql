@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 14, 2020 at 12:22 AM
+-- Generation Time: Apr 18, 2020 at 09:47 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -22,20 +22,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Applicants` (
   `Applicants_ID` int(50) NOT NULL,
-  `Name` varchar(50) NOT NULL,
+  `First_Name` varchar(50) NOT NULL,
   `Last_Name` varchar(50) NOT NULL,
   `Resume` varchar(255) NOT NULL,
-  `StatusOfApplication` varchar(50) NOT NULL
+  `StatusOfApplication` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Applicants`
 --
 
-INSERT INTO `Applicants` (`Applicants_ID`, `Name`, `Last_Name`, `Resume`, `StatusOfApplication`) VALUES
-(1, 'Rachel', 'Ferrara', 'Hi my name is Rachel ', 'Submitted'),
-(2, 'sally', 'smith', 'test', 'accepted'),
-(3, 'john', 'smith ', 'scnefuifvune', 'accepted');
+INSERT INTO `Applicants` (`Applicants_ID`, `First_Name`, `Last_Name`, `Resume`, `StatusOfApplication`, `username`) VALUES
+(1, 'Rachel', 'Ferrara', 'Hi my name is Rachel ', 'Submitted', ''),
+(2, 'sally', 'smith', 'test', 'accepted', ''),
+(3, 'john', 'smith ', 'scnefuifvune', 'accepted', '');
 
 -- --------------------------------------------------------
 
@@ -144,6 +145,41 @@ INSERT INTO `Job_Opening` (`Opening_ID`, `Title`, `Description`, `Date`, `Status
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `masterlogin`
+--
+
+CREATE TABLE `masterlogin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(15) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `role` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `masterlogin`
+--
+
+INSERT INTO `masterlogin` (`id`, `username`, `email`, `password`, `role`) VALUES
+(11, 'ateam', 'ateam@gmail.com', '123456', 'recruiter'),
+(12, 'rachel', 'rachel@gmail.com', '1234567', 'employee'),
+(13, 'hello', 'hello@gmail.com', 'hello123', 'user'),
+(14, 'tester', 'tester@gmail.com', 'tester123', 'employee'),
+(15, 'test1', 'test1@gmail.com', 'test12345', 'user'),
+(16, 'user1', 'user@gmail.com', 'user123', 'user'),
+(17, 'testt', 'testt@gmail.com', '123456', 'user'),
+(18, 'testtt', 'testtt@gmail.com', '123456', 'user'),
+(19, 'hi', 'hi@gmail.com', '123456', 'user'),
+(20, 'test2', 'test2@gmail.com', '123456', 'employee'),
+(21, 'username', 'username@gmail.com', '123456', 'user'),
+(22, 'h', 'h@gmail.com', '123456', 'employee'),
+(23, 'j', 'j@gmail.com', '123456', 'recruiter'),
+(24, 'k', 'k@gmail.com', '123456', 'recruiter'),
+(25, 'user2', 'user2@gmail.com', '123456', 'user');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Search_Committee`
 --
 
@@ -168,8 +204,7 @@ INSERT INTO `Search_Committee` (`SearchCommittee_ID`, `Employee_ID`, `Opening_ID
 -- Indexes for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  ADD PRIMARY KEY (`Applicants_ID`),
-  ADD UNIQUE KEY `Applicants_ID` (`Applicants_ID`,`Name`);
+  ADD PRIMARY KEY (`Applicants_ID`);
 
 --
 -- Indexes for table `Association`
@@ -194,6 +229,12 @@ ALTER TABLE `Employee`
 --
 ALTER TABLE `Job_Opening`
   ADD PRIMARY KEY (`Opening_ID`);
+
+--
+-- Indexes for table `masterlogin`
+--
+ALTER TABLE `masterlogin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `Search_Committee`
@@ -236,50 +277,13 @@ ALTER TABLE `Job_Opening`
   MODIFY `Opening_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
+-- AUTO_INCREMENT for table `masterlogin`
+--
+ALTER TABLE `masterlogin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
 -- AUTO_INCREMENT for table `Search_Committee`
 --
 ALTER TABLE `Search_Committee`
   MODIFY `SearchCommittee_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-  
-  
- 
---
--- Table structure for table `masterlogin`
---
-
-CREATE TABLE `masterlogin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(15) NOT NULL,
-  `email` varchar(40) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `role` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `masterlogin`
---
-
-INSERT INTO `masterlogin` (`id`, `username`, `email`, `password`, `role`) VALUES
-(11, 'ateam', 'ateam@gmail.com', '123456', 'admin'),
-(12, 'rachel', 'rachel@gmail.com', '1234567', 'employee');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `masterlogin`
---
-ALTER TABLE `masterlogin`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `masterlogin`
---
-ALTER TABLE `masterlogin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
