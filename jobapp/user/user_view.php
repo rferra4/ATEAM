@@ -1,6 +1,6 @@
 <<?php include 'inc/uheader.php'; ?>
 <center>
- <h1>User Home Page</h1>
+ <h1>User View Listings</h1>
 
  <h3>
    <?php include 'inc/ufooter.php'; ?>

@@ -77,34 +77,153 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
 ?>
 <div class="hero">
   <div class="form-box">
-    <div class="button-box">
-                <div id="btn"></div>
-
-            </div>
-
-<form id = "LOGIN" class = "input-group" method="post" >
-<h3 class="input-field-title">Register</h3>
- <input type="text" name="txt_username" class="input-field" placeholder="enter username" />
+    <div class="button-box" style="width:100%">
+        <div id="btn"></div>
+              <button type="button" class="toggle-btn" onclick="user()" style="width:30%">User</button>
+              <button type="button" class="toggle-btn" onclick="employee()" style="width:30%">Employee</button>
+              <button type="button" class="toggle-btn" onclick="recruiter()" style="width:30%">Recruiter</button>
+    </div>
 
 
- <input type="text" name="txt_email" class="input-field" placeholder="enter email" />
-
- <input type="password" name="txt_password" class="input-field" placeholder="enter passowrd" />
-
-  <select class="input-field" name="txt_role">
-   <option value="" selected="selected"> - select role - </option>
-   <option value="employee">Employee</option>
-   <option value="user">User</option>
-  </select>
-  <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
 
 
- <input type="submit"  name="btn_register" class="submit-btn" value="Register">
 
- <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
+
+
+
+
+
+
+
+      <!---------------------------------------------------------------------------------------------------->
+      <!-- EMPLOYEE Form Box -->
+      <!---------------------------------------------------------------------------------------------------->
+      <form id ="USER" class="input-group" method="post"  >
+
+      <h3 class="input-field-title">User Registration</h3>
+
+        <input type="text" name="txt_username" class="input-field" placeholder="Username" />
+        <input type="text" name="txt_email" class="input-field" placeholder="Email" />
+        <input type="password" name="txt_password" class="input-field" placeholder="Password" />
+
+        <input type="file" name="resume"class="resume-btn"  hidden="hidden">
+        <button type="button"class="resume-btn">Upload Resume</button>
+        <span class="resume-btn-text">No file chosen, yet.</span>
+
+              <!--<select class="input-field" name="txt_role">
+               <option value="" selected="selected"> - select role - </option>
+               <option value="employee">Employee</option>
+               <option value="user">User</option>
+               <option value="recruiter">Recruiter</option>
+             </select> -->
+       <input type="checkbox" class="check-box" name = "txt_role" value = "user"> <span>I agree to the terms & conditions</span>
+
+       <input type="submit"  name="btn_register" class="submit-btn">
+
+
+       <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
+
+      </form>
+
+
+      <!---------------------------------------------------------------------------------------------------->
+      <!-- EMPLOYEE Form Box -->
+      <!---------------------------------------------------------------------------------------------------->
+      <form id ="EMPLOYEE" class="input-group" method="post" >
+      <h3 class="input-field-title">Employee Registration</h3>
+        <input type="text" name="txt_firstname" class="input-field" placeholder="First Name" />
+        <input type="text" name="txt_lastname" class="input-field" placeholder="Last Name" />
+        <input type="text" name="txt_username" class="input-field" placeholder="Username" />
+        <input type="text" name="txt_email" class="input-field" placeholder="Email" />
+        <input type="password" name="txt_password" class="input-field" placeholder="Password" />
+        <input type="text" name="txt_id" class="input-field" placeholder="Employee ID Number" />
+              <!--<select class="input-field" name="txt_role">
+               <option value="" selected="selected"> - select role - </option>
+               <option value="employee">Employee</option>
+               <option value="user">User</option>
+               <option value="recruiter">Recruiter</option>
+             </select> -->
+
+       <input type="checkbox" class="check-box" name = "txt_role" value = "employee"> <span>I agree to the terms & conditions</span>
+       <input type="submit"  name="btn_register" class="submit-btn" value="Register">
+
+       <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
+      </form>
+
+      <!---------------------------------------------------------------------------------------------------->
+      <!-- RECRUITER Form Box -->
+      <!---------------------------------------------------------------------------------------------------->
+      <form id ="RECRUITER" class = "input-group" method="post" >
+      <h3 class="input-field-title">Recruiter Registration</h3>
+        <input type="text" name="txt_firstname" class="input-field" placeholder="First Name" />
+        <input type="text" name="txt_lastname" class="input-field" placeholder="Last Name" />
+        <input type="text" name="txt_username" class="input-field" placeholder="Username" />
+        <input type="text" name="txt_email" class="input-field" placeholder="Email" />
+        <input type="password" name="txt_password" class="input-field" placeholder="Password" />
+              <!--<select class="input-field" name="txt_role">
+               <option value="" selected="selected"> - select role - </option>
+               <option value="employee">Employee</option>
+               <option value="user">User</option>
+               <option value="recruiter">Recruiter</option>
+             </select> -->
+       <input type="checkbox" class="check-box" name = "txt_role" value = "recruiter"> <span>I agree to the terms & conditions</span>
+       <input type="submit"  name="btn_register" class="submit-btn" value="Register">
+
+       <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
+      </form>
+
+    </div>
 </div>
-</div>
 
-</form>
+
+<!--Script for switching between User, Employee, and Recruiter forms -->
+<script>
+    var w = document.getElementById("USER");
+    var x = document.getElementById("EMPLOYEE");
+    var y = document.getElementById("RECRUITER");
+    var z = document.getElementById("btn");
+
+    function user(){
+        w.style.left = "50px";
+        x.style.left = "400px";
+        y.style.left = "400px";
+        z.style.left = "0px";
+    }
+    function employee(){
+        w.style.left = "-400px";
+        x.style.left = "50px";
+        y.style.left = "400px";
+        z.style.left = "120px";
+    }
+    function recruiter(){
+        w.style.left = "-400px";
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "240px";
+    }
+
+</script>
+
+<!--Script for showing the chosen file for the upload resume button -->
+<!--this script return the given file name without including the path-->
+<script type="text/javascript">
+    const resumeFile = document.getElementById("resume");
+    const resumeBtn = document.getElementById("resume_button");
+    const customText = document.getElementById("custom-text");
+
+    resumeBtn.addEventListener("click", function(){
+        resumeFile.click();
+    });
+
+    resumeFile.addEventListener("change", function(){
+        if(resumeFile.value){
+            customText.innerHTML = resumeFile.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        } else{
+            customText.innerHTML = "No file chosen, yet."
+        }
+    });
+
+</script>
+
 </body>
 </html>

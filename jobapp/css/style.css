@@ -182,16 +182,14 @@ span{
     bottom: 68px;
     position: absolute;
 }
-#LOGIN{
+#USER{
     left: 50px;
 }
-#REGISTER{
+
+#EMPLOYEE{
     left: 450px;
 }
-#EMPLOYEE{
-    left: 50px;
-}
-#HIRER{
+#RECRUITER{
     left: 450px;
 }
 .resume-btn{

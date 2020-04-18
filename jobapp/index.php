@@ -1,6 +1,3 @@
-<?php include_once 'config/init.php'; ?>
-
-<?php include '/templates/inc/main_page.php'; ?>
 <link rel="stylesheet" href="css/style.css"/>
 
 <?php
@@ -10,11 +7,11 @@ session_start();
 
 if(isset($_SESSION["admin_login"])) //check condition admin login not direct back to index.php page
 {
- header("location: admin/admin_home.php");
+ header("location: recruiter/recruiter_home.php");
 }
 if(isset($_SESSION["employee_login"])) //check condition employee login not direct back to index.php page
 {
- header("location: employee/employee_home.php");
+ header("location: employee/employee_verify.php");
 }
 if(isset($_SESSION["user_login"])) //check condition user login not direct back to index.php page
 {
@@ -62,22 +59,22 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
      {
       switch($dbrole)  //role base user login start
       {
-       case "admin":
+       case "recruiter":
         $_SESSION["admin_login"]=$email;   //session name is "admin_login" and store in "$email" variable
         $loginMsg="Admin... Successfully Login..."; //admin login success message
-        header("refresh:3;admin/admin_home.php"); //refresh 3 second after redirect to "admin_home.php" page
+        header("recruiter/recruiter_home.php"); //refresh 3 second after redirect to "admin_home.php" page
         break;
 
        case "employee":
         $_SESSION["employee_login"]=$email;    //session name is "employee_login" and store in "$email" variable
         $loginMsg="Employee... Successfully Login...";  //employee login success message
-        header("refresh:3;employee/employee_home.php"); //refresh 3 second after redirect to "employee_home.php" page
+        header("employee/employee_home.php"); //refresh 3 second after redirect to "employee_home.php" page
         break;
 
        case "user":
         $_SESSION["user_login"]=$email;    //session name is "user_login" and store in "$email" variable
         $loginMsg="User... Successfully Login..."; //user login success message
-        header("refresh:3;user/user_home.php");  //refresh 3 second after redirect to "user_home.php" page
+        header("user/user_home.php");  //refresh 3 second after redirect to "user_home.php" page
         break;
 
        default:
@@ -114,10 +111,10 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
 <form class="form" method="post" name="login">
   <h1 class="login-title">Login</h1>
   <input type="text" class="login-input" name="txt_email" placeholder="enter email" autofocus="true"/>
-  <input type="password" class="login-input" name="txt_password" placeholder="enter passowrd" autofocus="true"/>
+  <input type="password" class="login-input" name="txt_password" placeholder="enter password" autofocus="true"/>
   <select class="login-input" name="txt_role">
    <option value="" selected="selected"> - select role - </option>
-   <option value="admin">Admin</option>
+   <option value="recruiter">Recruiter</option>
    <option value="employee">Employee</option>
    <option value="user">User</option>
   </select>
