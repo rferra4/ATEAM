@@ -38,7 +38,7 @@
 
  <input type="submit"  name="btn_apply" class="submit-btn" value="Application">
 
- <p class = "link"> Already applied? <a href="index.php">Go back to job listings here</a></p>
+ <p class = "link"> Already applied? <a href="viewer.php">Go back to job listings here</a></p>
 </div>
 </div>
 

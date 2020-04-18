@@ -1,4 +1,4 @@
-<?php include 'inc/header.php'; ?>
+<?php include '../user/inc/uheader.php'; ?>
 <!DOCTYPE html>
 <html>
 <div class="jumbotron">
@@ -8,7 +8,7 @@
 
 
 <div class = "col-md-2">
-        <a class = "btn btn-default" href = "templates/apply.php">APPLY HERE</a>
+        <a class = "btn btn-default" href = "apply.php">APPLY HERE</a>
 </div>
 
 

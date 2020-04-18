@@ -62,19 +62,19 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
        case "recruiter":
         $_SESSION["admin_login"]=$email;   //session name is "admin_login" and store in "$email" variable
         $loginMsg="Admin... Successfully Login..."; //admin login success message
-        header("recruiter/recruiter_home.php"); //refresh 3 second after redirect to "admin_home.php" page
+        header("refresh:0; recruiter/recruiter_home.php"); //refresh 3 second after redirect to "admin_home.php" page
         break;
 
        case "employee":
         $_SESSION["employee_login"]=$email;    //session name is "employee_login" and store in "$email" variable
         $loginMsg="Employee... Successfully Login...";  //employee login success message
-        header("employee/employee_home.php"); //refresh 3 second after redirect to "employee_home.php" page
+        header("refresh:0; employee/employee_home.php"); //refresh 3 second after redirect to "employee_home.php" page
         break;
 
        case "user":
         $_SESSION["user_login"]=$email;    //session name is "user_login" and store in "$email" variable
         $loginMsg="User... Successfully Login..."; //user login success message
-        header("user/user_home.php");  //refresh 3 second after redirect to "user_home.php" page
+        header("refresh:0; user/user_home.php");  //refresh 3 second after redirect to "user_home.php" page
         break;
 
        default:

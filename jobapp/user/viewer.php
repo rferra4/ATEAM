@@ -1,9 +1,10 @@
-<?php include_once 'config/init.php'; ?>
+<?php include_once '../config/init.php'; ?>
+<?php include_once '../lib/Job.php'; ?>
 
 <?php
 $job = new Job;
 
-$template = new Template('templates/view_listings.php');
+$template = new Template('user/user_view.php');
 
 $category = isset($_GET['category']) ? $_GET['category'] : null;
 

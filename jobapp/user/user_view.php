@@ -1,36 +1,34 @@
-<<?php include 'inc/uheader.php'; ?>
-<center>
- <h1>User View Listings</h1>
+<?php include_once '../config/init.php'; ?>
 
- <h3>
-   <?php include 'inc/ufooter.php'; ?>
- <?php
+<?php include 'inc/uheader.php'; ?>
+      <div class="jumbotron">
+        <h1 class="display-4">Find Your Dream Job</h1>
+        <form>
+            <select name= "category" class = "form-control">
+            <option value = "0" > Choose Company </option>
+            <?php foreach($Company as $category): ?>
+                <option value = "<?php echo $category->ID_Number; ?>"><?php echo $category->Name; ?></option>
+            <?php endforeach; ?>
+            </select>
+            <br>
+            <input type = "submit" class = "btn btn-lg btn-success" value = "Search">
+        </form>
+      </div>
 
- session_start();
 
- if(!isset($_SESSION['user_login'])) //check unauthorize user not direct access in "user_home.php" page
- {
-  header("location: ../index.php");
- }
+        <?php foreach($Job_Opening as $job): ?>
+        <div class="row marketing">
+            <div class="col-md-10">
+              <h4><?php echo $job->c_name; ?></h4>
+              <p><?php echo $job->Title; ?></p>
+              <p><?php echo $job->Status; ?></p>
+              <p><?php echo $job->c_add; ?></p>
 
- if(isset($_SESSION['admin_login'])) //check admin login user not access in "user_home.php" page
- {
-  header("location: ../admin/admin_home.php");
- }
 
- if(isset($_SESSION['employee_login'])) //check employee login user not access in "employee_home.php" page
- {
-  header("location: ../employee/employee_home.php");
- }
-
- if(isset($_SESSION['user_login']))
- {
- ?>
-  Welcome,
- <?php
-  echo $_SESSION['user_login'];
- }
- ?>
- </h3>
-  <a href="../logout.php">Logout</a>
-</center>
+            </div>
+            <div class = "col-md-2">
+                    <a class = "btn btn-default" href = "job.php?Opening_ID=<?php echo $job->Opening_ID;
+                    ?>">View</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
