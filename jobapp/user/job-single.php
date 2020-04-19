@@ -1,4 +1,6 @@
-<?php include '../user/inc/uheader.php'; ?>
+<?php include 'inc/uheader.php'; ?>
+<?php include_once '../config/init.php'; ?>
+<?php include_once '../lib/Job.php'; ?>
 <!DOCTYPE html>
 <html>
 <div class="jumbotron">
@@ -8,7 +10,8 @@
 
 
 <div class = "col-md-2">
-        <a class = "btn btn-default" href = "apply.php">APPLY HERE</a>
+        <a class = "btn btn-default" href = "job_app.php?Opening_ID=<?php echo $job->Opening_ID;
+        ?>">Apply</a>
 </div>
 
 

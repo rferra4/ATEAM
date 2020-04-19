@@ -12,15 +12,18 @@ if($link === false){
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
 $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
+$jobID = mysqli_real_escape_string($link, $_REQUEST['jobID']);
+
 
 // Attempt insert query execution
-$sql = "INSERT INTO Applicants (first_name, last_name, email) VALUES ('$first_name', '$last_name', '$email')";
+$sql = "INSERT INTO Applicants (first_name, last_name, email, jobID) VALUES ('$first_name', '$last_name', '$email', '$jobID')";
 if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
+    echo "Application submitted successfully. Redirecting you to the home page...";
+    header("refresh:3;user_home.php"); //refresh 4 second and redirect to index.php page
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-// Close connection
+// Close connections
 mysqli_close($link);
 ?>

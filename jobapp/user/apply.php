@@ -9,6 +9,8 @@
 
 
 
+<p>Job Title: <?php echo $job->Title; ?></p>
+<p>Job ID#: <?php echo $job->Opening_ID; ?></p>
 
 <body>
 <form action="insert.php" method="post">
@@ -20,9 +22,14 @@
         <label for="lastName">Last Name:</label>
         <input type="text" name="last_name" id="lastName">
     </p>
+
     <p>
         <label for="emailAddress">Email Address:</label>
         <input type="text" name="email" id="emailAddress">
+    </p>
+    <p>
+        <label for="jobid">Confirm Job ID#:</label>
+        <input type="text" name="jobID" id="jobid">
     </p>
     <input type="submit" value="Submit">
 </form>
