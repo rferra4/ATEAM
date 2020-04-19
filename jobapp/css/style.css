@@ -88,7 +88,7 @@ h3 {
 }
 .form-box-login{
     width: 380px;
-    height: 260px;
+    height: 320px;
     position: relative;
     margin: 6% auto;
     background: #fff;
@@ -109,8 +109,19 @@ h3 {
     margin-top: 35px;
     margin-bottom: 5px;
     position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
+    box-shadow: 40px 0 20px 9px #ff61241f;
     border-radius: 30px;
+}
+.register-title{
+  width: 100%;
+  padding: 10px 0;
+  margin: auto;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #999;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  text-align: center;
 }
 .toggle-btn{
     padding: 10px 30px;
@@ -140,17 +151,7 @@ h3 {
     margin-bottom: -15%;
     color: #495057;
 }
-.social-icons{
-    margin: 30px auto;
-    text-align: center;
-}
-.social-icons img{
-    width: 20px;
-    margin: 0 12px;
-    box-shadow: 0 0 20px 0 #7f7f7f3d;
-    cursor: pointer;
-    border-radius: 50%;
-}
+
 .input-group{
     top: 100px;
     position: absolute;
@@ -170,7 +171,7 @@ h3 {
 .input-field-title{
     width: 100%;
     padding: 10px 0;
-    margin: 5px 0;
+    margin: 0 40px;
     border-left: 0;
     border-top: 0;
     border-right: 0;
