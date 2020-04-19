@@ -1,35 +1,35 @@
-<?php include 'inc/eheader.php'; ?>
-      <<h1 class="display-4">Employee Profile Page</h1>
+<<?php include 'inc/eheader.php'; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Employee Profile</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
 
-<?php include 'inc/efooter.php'; ?>
 
- <?php
+<div class="hero">
+  <div class="form-box">
+       <div class="button-box" style="width:100%">
+           <h3 class="input-field-title">PROFILE</h3>
 
- session_start();
+    <form id ="USER" class="input-group" method="post"  >
+          <h6 class="input-field">First Name:</h6>
+          <h6 class="input-field">Last Name:</h6>
+          <h6 class="input-field">Username:</h6>
+          <h6 class="input-field">Email:</h6>
+          <h6 class="input-field">Password:</h6>
+          <textarea class="input-field" placeholder='Add Personal Info:'></textarea>
+          <textarea class="input-field" placeholder='Areas of Interest:'></textarea>
 
- if(!isset($_SESSION['employee_login'])) //check unauthorize user not direct access in "employee_home.php" page
- {
-  header("location: ../index.php");
- }
 
- if(isset($_SESSION['admin_login'])) //check admin login user not access in "employee_home.php" page
- {
-  header("location: ../admin/admin_home.php");
- }
 
- if(isset($_SESSION['user_login'])) //check user login user not access in "employee_home.php" page
- {
-  header("location: ../user/user_home.php");
- }
+      </form>
+    </div>
+</div>
+    </div>
 
- if(isset($_SESSION['employee_login']))
- {
- ?>
-  Welcome,
- <?php
-  echo $_SESSION['employee_login'];
- }
- ?>
- </h3>
-  <a href="../logout.php">Logout</a>
-</center>
+
+</body>
+</html>

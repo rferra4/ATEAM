@@ -107,12 +107,16 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
  }
 }
 ?>
+<div class="hero">
+        <div class="form-box-login">
+            <div class="login-title">
+                <h3 class="input-field-title">Login</h3>
+            </div>
 
-<form class="form" method="post" name="login">
-  <h1 class="login-title">Login</h1>
-  <input type="text" class="login-input" name="txt_email" placeholder="enter email" autofocus="true"/>
-  <input type="password" class="login-input" name="txt_password" placeholder="enter password" autofocus="true"/>
-  <select class="login-input" name="txt_role">
+<form class="form-login" method="post" name="login">
+  <input type="text" class="input-field" name="txt_email" placeholder="Enter Email" autofocus="true"/>
+  <input type="password" class="input-field" name="txt_password" placeholder="Enter Password" autofocus="true"/>
+  <select class="input-field" name="txt_role">
    <option value="" selected="selected"> - select role - </option>
    <option value="recruiter">Recruiter</option>
    <option value="employee">Employee</option>
@@ -120,7 +124,7 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
   </select>
 
 
- <input type="submit" name="btn_login" class="login-button" value="Login">
+ <input type="submit" name="btn_login" class="submit-btn" value="Login">
  <p class="link"> Don't have an account? <a href="register.php">Sign Up</a></p>
 
 
