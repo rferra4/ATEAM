@@ -12,7 +12,7 @@
 <div class="hero">
   <div class="form-box">
        <div class="button-box" style="width:100%">
-           <h3 class="input-field-title">PROFILE</h3>
+           <h3 class="profile-title">PROFILE</h3>
 
     <form id ="USER" class="input-group" method="post"  >
           <h6 class="input-field">First Name:</h6>
