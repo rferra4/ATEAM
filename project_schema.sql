@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 18, 2020 at 09:47 PM
+-- Generation Time: Apr 19, 2020 at 01:08 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -22,21 +22,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Applicants` (
   `Applicants_ID` int(50) NOT NULL,
-  `First_Name` varchar(50) NOT NULL,
-  `Last_Name` varchar(50) NOT NULL,
-  `Resume` varchar(255) NOT NULL,
-  `StatusOfApplication` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `jobID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Applicants`
 --
 
-INSERT INTO `Applicants` (`Applicants_ID`, `First_Name`, `Last_Name`, `Resume`, `StatusOfApplication`, `username`) VALUES
-(1, 'Rachel', 'Ferrara', 'Hi my name is Rachel ', 'Submitted', ''),
-(2, 'sally', 'smith', 'test', 'accepted', ''),
-(3, 'john', 'smith ', 'scnefuifvune', 'accepted', '');
+INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `jobID`) VALUES
+(16, 'd', 'd', 'd', 12),
+(17, 't', 't', 't', 12),
+(19, 'c', 'c', 'c', 12),
+(20, 'test', 'test', 'test@gmail.com', 11);
 
 -- --------------------------------------------------------
 
@@ -250,7 +250,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `Association`
