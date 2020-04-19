@@ -33,24 +33,8 @@ CREATE TABLE `Applicants` (
 --
 
 INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `jobID`) VALUES
-(1, 'Rachel', 'Ferrara', '', 0),
-(2, 'sally', 'smith', '', 0),
-(3, 'john', 'smith ', '', 0),
-(4, '', '', '', 0),
-(5, '', '', '', 0),
-(6, 'j', 'j', 'j@gmail.com', 0),
-(7, 'j', 'j', 'j@gmail.com', 0),
-(8, 'k', 'k', 'k', 0),
-(9, 'r', 'r', 'r', 0),
-(10, 'o', 'o', 'o', 0),
-(11, 'p', 'p', 'p', 0),
-(12, 'q', 'q', 'q', 0),
-(13, 't', 't', 't', 0),
-(14, 'q', 'q', 'q', 0),
-(15, 'n', 'n', 'n', 0),
 (16, 'd', 'd', 'd', 12),
 (17, 't', 't', 't', 12),
-(18, 'uu', 'u', 'u', 2),
 (19, 'c', 'c', 'c', 12),
 (20, 'test', 'test', 'test@gmail.com', 11);
 
