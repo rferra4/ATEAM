@@ -72,7 +72,7 @@ h3 {
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("img/banner.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("banner.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -190,14 +190,28 @@ h3 {
     outline: none;
     border-radius: 30px;
 }
+.submit-btn-user{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px 10px 10px 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
 .check-box{
     margin: 30px 10px 30px 0;
 }
-span{
+.check-box-user{
+    margin: 10px 10px 10px 0;
+}
+
+.terms-text{
     color: #777;
     font-size: 12px;
     bottom: 68px;
-    position: absolute;
 }
 #USER{
     left: 50px;
@@ -227,15 +241,14 @@ span{
     background-color: aquamarine;
 }
 .resume-btn-text{
-    margin-left: 10px;
     font-family: sans-serif;
     color: #aaa;
     width: 100%;
-    padding: 20px 0;
     margin: 5px 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
     background: transparent;
+    font-size: 12px;
 }
