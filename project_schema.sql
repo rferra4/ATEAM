@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 19, 2020 at 09:57 PM
+-- Generation Time: Apr 19, 2020 at 10:55 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -56,7 +56,10 @@ INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `
 (21, 't', 't', 't', 12),
 (22, 'hi', 'hi', 'hi@gmail.com', 24),
 (23, 'i', 'i', 'i@gmail.com', 23),
-(24, 'jo', 'jo', 'jo@gmail.com', 26);
+(24, 'jo', 'jo', 'jo@gmail.com', 26),
+(25, 'ABC', 'abc', 'abc@gmail.com', 12),
+(26, 'kl', 'kl', 'kl@gmail.com', 16),
+(27, 'abc', 'abc', 'abc@gmail.com', 19);
 
 -- --------------------------------------------------------
 
@@ -146,10 +149,25 @@ CREATE TABLE `Job_Opening` (
   `name` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
   `company` varchar(100) NOT NULL,
-  `salary` int(100) NOT NULL
+  `salary` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `Job_Opening`
+--
 
+INSERT INTO `Job_Opening` (`id`, `name`, `address`, `company`, `salary`) VALUES
+(12, 'software engineer', '7834 Brightside Rd, LA 9890', 'PDVSA', 'n/a'),
+(13, 'Senior Developer', 'Brightside Rd, LA 9890', 'PDVSA', 'n/a'),
+(15, 'Civil Engineer', '2123 Highland Rd, LA 1237', 'Petrobas', 'n/a'),
+(16, 'Director Engineering', '2123 Highland Rd, LA 1237.', 'Petrobas', 'n/a'),
+(17, 'Civil Engineer', '2342 Nicholson Dr, LA 70830', 'Ecopetrol', 'n/a'),
+(18, 'Mechanical Engineering intern', '2342 Nicholson Dr, LA 70830', 'Ecopetrol', 'n/a'),
+(19, 'Data engineer', 'BR, LA', 'PDVSA', 'n/a');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `masterlogin`
 --
 
@@ -278,7 +296,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `Association`
@@ -302,7 +320,7 @@ ALTER TABLE `Employee`
 -- AUTO_INCREMENT for table `Job_Opening`
 --
 ALTER TABLE `Job_Opening`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `masterlogin`
