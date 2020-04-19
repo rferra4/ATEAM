@@ -21,7 +21,6 @@
             <div class="col-md-10">
               <h4><?php echo $job->c_name; ?></h4>
               <p><?php echo $job->Title; ?></p>
-              <p><?php echo $job->Status; ?></p>
               <p><?php echo $job->c_add; ?></p>
 
 

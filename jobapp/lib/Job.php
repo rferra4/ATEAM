@@ -1,17 +1,17 @@
 <?php
     class Job{
-        private $db; 
+        private $db;
 
         public function __construct(){
             $this->db = new Database;
 
         }
 
-        //Get all jobs 
+        //Get all jobs
         public function getAllJobs(){
             $this->db->query("SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
                         FROM Job_Opening
-                        INNER JOIN Company ON Job_Opening.Company_ID = Company.ID_Number
+                        INNER JOIN Company ON Job_Opening.Company_Name = Company.Name
                         ORDER BY Job_Opening.Date DESC
                         ");
 
@@ -23,7 +23,7 @@
         }
 
         public function getCategories(){
-            $this->db->query("SELECT * 
+            $this->db->query("SELECT *
                         FROM Company ");
 
 
@@ -36,9 +36,9 @@
         public function getByCategory($category){
             $this->db->query("SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
             FROM Job_Opening
-            INNER JOIN Company 
-            ON Job_Opening.Company_ID = Company.ID_Number
-            WHERE Job_Opening.Company_ID = $category
+            INNER JOIN Company
+            ON Job_Opening.Company_Name = Company.Name
+            WHERE Job_Opening.Company_Name = $category
             ORDER BY Job_Opening.Date DESC
             ");
 
@@ -49,8 +49,8 @@
         return $results;
         }
 
-        public function getCategory($Company_ID){
-            $this->db->query("SELECT * FROM Company WHERE ID_Number = :Company_ID");
+        public function getCategory($Company_Name){
+            $this->db->query("SELECT * FROM Company WHERE ID_Number = :Company_Name");
             $this->db->bind(':Company_ID', $Company_ID);
 
 
@@ -68,6 +68,7 @@
             $row = $this->db->single();
 
             return $row;
+}
 
-        }
+
     }
