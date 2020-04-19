@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 19, 2020 at 01:07 AM
+-- Generation Time: Apr 19, 2020 at 01:08 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -51,7 +51,8 @@ INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `
 (16, 'd', 'd', 'd', 12),
 (17, 't', 't', 't', 12),
 (18, 'uu', 'u', 'u', 2),
-(19, 'c', 'c', 'c', 12);
+(19, 'c', 'c', 'c', 12),
+(20, 'test', 'test', 'test@gmail.com', 11);
 
 -- --------------------------------------------------------
 
@@ -265,7 +266,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `Association`
