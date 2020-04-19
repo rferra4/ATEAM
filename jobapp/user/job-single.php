@@ -1,25 +1,23 @@
 <?php include 'inc/uheader.php'; ?>
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
-<!DOCTYPE html>
-<html>
-<div class="jumbotron">
-  <h1 class="display-4">Job Details</h1>
+<h2 class="page=header"><?php echo $job->Title; ?> (**insert code for location**) </h2>
 
-</div>
+<small> Posted By **insert php code for company name** on <?php echo $job->Date; ?></small>
 
-
-<div class = "col-md-2">
-        <a class = "btn btn-default" href = "job_app.php?Opening_ID=<?php echo $job->Opening_ID;
-        ?>">Apply</a>
-</div>
+<hr>
+<br><br>
+<a href = "job_app.php?Opening_ID=<?php echo $job->Opening_ID;
+?>">Apply Here </a>
+<br><br>
+<medium><?php echo $job->Description; ?> </medium>
 
 
-<?php echo $job->Title; ?>
-<br>
-<?php echo $job->Status; ?>
-<br>
-<?php echo $job->Description; ?>
 
 
-<?php include 'inc/footer.php'; ?>
+
+
+
+
+
+<?php include '../templates/inc/footer.php'; ?>
