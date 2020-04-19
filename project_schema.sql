@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 18, 2020 at 09:47 PM
+-- Generation Time: Apr 19, 2020 at 01:07 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -22,21 +22,36 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Applicants` (
   `Applicants_ID` int(50) NOT NULL,
-  `First_Name` varchar(50) NOT NULL,
-  `Last_Name` varchar(50) NOT NULL,
-  `Resume` varchar(255) NOT NULL,
-  `StatusOfApplication` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `jobID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Applicants`
 --
 
-INSERT INTO `Applicants` (`Applicants_ID`, `First_Name`, `Last_Name`, `Resume`, `StatusOfApplication`, `username`) VALUES
-(1, 'Rachel', 'Ferrara', 'Hi my name is Rachel ', 'Submitted', ''),
-(2, 'sally', 'smith', 'test', 'accepted', ''),
-(3, 'john', 'smith ', 'scnefuifvune', 'accepted', '');
+INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `jobID`) VALUES
+(1, 'Rachel', 'Ferrara', '', 0),
+(2, 'sally', 'smith', '', 0),
+(3, 'john', 'smith ', '', 0),
+(4, '', '', '', 0),
+(5, '', '', '', 0),
+(6, 'j', 'j', 'j@gmail.com', 0),
+(7, 'j', 'j', 'j@gmail.com', 0),
+(8, 'k', 'k', 'k', 0),
+(9, 'r', 'r', 'r', 0),
+(10, 'o', 'o', 'o', 0),
+(11, 'p', 'p', 'p', 0),
+(12, 'q', 'q', 'q', 0),
+(13, 't', 't', 't', 0),
+(14, 'q', 'q', 'q', 0),
+(15, 'n', 'n', 'n', 0),
+(16, 'd', 'd', 'd', 12),
+(17, 't', 't', 't', 12),
+(18, 'uu', 'u', 'u', 2),
+(19, 'c', 'c', 'c', 12);
 
 -- --------------------------------------------------------
 
@@ -250,7 +265,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `Association`
