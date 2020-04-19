@@ -71,4 +71,21 @@
 }
 
 
+        public function twentyApplicationsChecker(){
+        $this->db->query("SELECT * FROM Applicants WHERE Applicants_ID = :Applicant_ID");
+        $this->db->bind(':Applicant_ID', $Applicants_ID);
+
+        $row = $result->fetch();
+
+        $numappliedjobs = $row["NumberAppliedJobs"];
+
+        // If number of applied jobs is greater than or equal to 1, then deny application request
+        if($numappliedjobs >= 20){
+          return false;
+        }
+        return true;
+
+      }
+
+
     }
