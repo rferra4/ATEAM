@@ -29,8 +29,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $input_address = trim($_POST["address"]);
     if(empty($input_address)){
         $address_err = "Please enter the salary amount.";
-    } elseif(!ctype_digit($input_address)){
-        $address_err = "Please enter a positive integer value.";
     } else{
         $address = $input_address;
     }
@@ -42,8 +40,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
    $input_salary = trim($_POST["salary"]);
    if(empty($input_salary)){
        $salary_err = "Please enter the salary amount.";
-   } elseif(!ctype_digit($input_salary)){
-       $salary_err = "Please enter a positive integer value.";
    } else{
        $salary = $input_salary;
    }
@@ -65,7 +61,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $sql = "UPDATE Job_Opening SET name=?, address=?, company=?, salary=? WHERE id=?";
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssi", $param_name,  $param_address, $param_company, $param_salary, $param_id);
+            mysqli_stmt_bind_param($stmt, "ssssi", $param_name,  $param_address, $param_company, $param_salary, $param_id);
 
             // Set parameters
             $param_name = $name;
