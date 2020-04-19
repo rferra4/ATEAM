@@ -9,8 +9,8 @@
 
 
 
-<p>Job Title: <?php echo $job->Title; ?></p>
-<p>Job ID#: <?php echo $job->Opening_ID; ?></p>
+<p>Job Title: <?php echo $job->company; ?></p>
+<p>Job ID#: <?php echo $job->id; ?></p>
 
 <body>
 <form action="insert.php" method="post">

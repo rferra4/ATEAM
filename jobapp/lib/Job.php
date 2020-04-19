@@ -9,11 +9,7 @@
 
         //Get all jobs
         public function getAllJobs(){
-            $this->db->query("SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
-                        FROM Job_Opening
-                        INNER JOIN Company ON Job_Opening.Company_Name = Company.Name
-                        ORDER BY Job_Opening.Date DESC
-                        ");
+            $this->db->query("SELECT * FROM Job_Opening");
 
 
             //assign result set
@@ -60,9 +56,9 @@
         }
 
 
-        public function getJob($Opening_ID){
-            $this->db->query("SELECT * FROM Job_Opening WHERE Opening_ID = :Opening_ID");
-            $this->db->bind(':Opening_ID', $Opening_ID);
+        public function getJob($id){
+            $this->db->query("SELECT * FROM Job_Opening WHERE id = :id");
+            $this->db->bind(':id', $id);
 
 
             $row = $this->db->single();

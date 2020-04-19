@@ -35,12 +35,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate salary
     $input_salary = trim($_POST["salary"]);
     if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = "Please enter a positive integer value.";
+        $salary_err = "Please enter a Company.";
     } else{
         $salary = $input_salary;
     }
+
 
     // Check input errors before inserting in database
     if(empty($name_err) && empty($address_err) && empty($company_err) && empty($salary_err)){

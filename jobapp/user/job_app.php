@@ -6,11 +6,11 @@ $job = new Job;
 
 $template = new Template('apply.php');
 
-$Opening_ID = isset($_GET['Opening_ID']) ? $_GET['Opening_ID'] : null;
+$id = isset($_GET['id']) ? $_GET['id'] : null;
 
 
 
 
-$template->job = $job->getJob($Opening_ID);
+$template->job = $job->getJob($id);
 
 echo $template;
