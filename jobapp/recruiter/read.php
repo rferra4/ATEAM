@@ -7,7 +7,7 @@
 // Check existence of id parameter before processing further
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     // Include config file
-    require_once "config.php";
+    require_once '../config/app_config.php';
 
     // Prepare a select statement
     $sql = "SELECT * FROM Job_Opening WHERE id = ?";

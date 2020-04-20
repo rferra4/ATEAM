@@ -7,7 +7,7 @@
 session_start();
 
 //connect to db
-$mysqli = new mysqli('localhost', 'root', 'mysql','project_schema') or die(mysqli_error($mysqli));
+require_once '../config/app_config.php';
 
 
 $update = false;

@@ -2,6 +2,7 @@
 
 
 <?php
+//require_once '../config/app_config.php';
 
 	if ($_POST['upload'] )
 

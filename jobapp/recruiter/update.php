@@ -5,7 +5,7 @@
 
 <?php
 // Include config file
-require_once "config.php";
+require_once '../config/app_config.php';
 
 // Define variables and initialize with empty values
 $name = $address = $company = $salary = "";

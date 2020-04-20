@@ -37,7 +37,7 @@
         <!-------------------------------------------->
         <?php
             //connect to database
-            $mysqli = new mysqli('localhost', 'root', 'root','project_schema') or die(mysqli_error($mysqli));
+            require_once '../config/app_config.php';
 
             //selecting everything from "data" table and storing as $result
             $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
@@ -87,10 +87,10 @@
                 <td><?php echo $row['info']; ?></td>
                 <td>
                     <!-- Edit Button -->
-                    <a href="pindex.php?edit=<?php echo $row['id'] ?>"
+                    <a href="../pindex.php?edit=<?php echo $row['id'] ?>"
                        class="btn btn-info">Edit</a>
                     <!-- Delete Button -->
-                    <a href="process.php?delete=<?php echo $row['id']?>"
+                    <a href="../process.php?delete=<?php echo $row['id']?>"
                        class="btn btn-danger">Delete</a>
                 </td>
             </tr>

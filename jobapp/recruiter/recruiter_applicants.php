@@ -6,10 +6,8 @@
 <html>
 <body>
 <?php
-$username = "root";
-$password = "root";
-$database = "project_schema";
-$mysqli = new mysqli("localhost", $username, $password, $database);
+require_once '../config/app_config.php';
+
 $query = "SELECT * FROM Applicants";
 
 

@@ -3,7 +3,7 @@
 <?php include 'inc/rheader2.php' ?>
 <?php
 // Include config file
-require_once "config.php";
+require_once '../config/app_config.php';
 
 // Define variables and initialize with empty values
 $name = $address = $company = $description = $salary = $sc_email = $Field = $State = $Education = "";

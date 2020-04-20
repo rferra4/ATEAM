@@ -7,7 +7,7 @@
 // Process delete operation after confirmation
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Include config file
-    require_once "config.php";
+    require_once '../config/app_config.php';
 
     // Prepare a delete statement
     $sql = "DELETE FROM Job_Opening WHERE id = ?";
