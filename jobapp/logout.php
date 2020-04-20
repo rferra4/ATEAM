@@ -1,3 +1,6 @@
+<!-- database constants -->
+
+
 <?php
 session_start();
 

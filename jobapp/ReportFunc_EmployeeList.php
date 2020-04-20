@@ -1,3 +1,6 @@
+<!-- connect to database and pull employee list-->
+
+
 <?php
   require_once "connection.php";
 

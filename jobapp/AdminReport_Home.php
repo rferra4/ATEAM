@@ -1,3 +1,6 @@
+<!--connect to database and pull all info related to the company entered-->
+
+
 <!DOCTYPE html>
 <html>
 <head>

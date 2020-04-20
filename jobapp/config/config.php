@@ -1,3 +1,6 @@
+<!-- database constants -->
+
+
 <?php
 
 define("DB_HOST", "localhost");

@@ -1,3 +1,7 @@
+<!-- page that loads after recruiter is logged input
+checks if person logged in is a recruiter -->
+
+
 <?php include 'inc/rheader2.php'; ?>
 <center>
  <h1>Recruiter Page</h1>

@@ -1,3 +1,6 @@
+<!-- not yet fully implemented...class that loads data from the viewer.php file to be displayed-->
+
+
 <?php include_once '../config/init.php';?>
 <?php include_once '../lib/Job.php'; ?>
 

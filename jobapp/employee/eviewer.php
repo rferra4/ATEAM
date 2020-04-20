@@ -1,3 +1,5 @@
+<!-- Grabs info from database to be displayed on the employee listing page -->
+
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
 

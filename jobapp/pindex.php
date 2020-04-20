@@ -1,5 +1,7 @@
+<!-- database constants -->
+
 <?php
-    include '/connection.php'; 
+    include '/connection.php';
     session_start();
  ?>
  <link rel="stylesheet" href="css/style.css"/>
@@ -112,9 +114,9 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
 }
 ?>
 
-<?php   
+<?php
           if (!isset($_SESSION['username'])) {
-     ?> 
+     ?>
 <div class="hero">
         <div class="form-box-login">
             <div class="login-title">
@@ -137,29 +139,25 @@ if(isset($_REQUEST['btn_login'])) //login button name is "btn_login" and set thi
 
 
 </form>
-  
-            
-     
-     
-     
-      <?php } else 
-      if (isset($_SESSION['username'])) { 
-      ?>      
-        <a href="profile.php?user=<?php echo $_SESSION['username'] ?>" title="View My Profile"><?php echo $_SESSION['username'] ?></a> | <a href="../logout.php">Logout</a>       
-           <?php }    
-          ?>      
-        <?php     
-             if (isset($_SESSION['username'])) {   
+
+
+
+
+
+      <?php } else
+      if (isset($_SESSION['username'])) {
+      ?>
+        <a href="profile.php?user=<?php echo $_SESSION['username'] ?>" title="View My Profile"><?php echo $_SESSION['username'] ?></a> | <a href="../logout.php">Logout</a>
+           <?php }
+          ?>
+        <?php
+             if (isset($_SESSION['username'])) {
            $users = $mysqli->query("SELECT * FROM masterlogin");
-                while ($user_data = $users->fetch_assoc()) { ?><br><br> 
-                <b>#<?php echo $user_data['id'] ?></b> 
-      <?php echo $user_data['username'] ?> | <a href="profile.php?user=<?php echo $user_data['username'] ?>">View Profile</a>            
-          <?php }          
-     }      
-     ?>    
+                while ($user_data = $users->fetch_assoc()) { ?><br><br>
+                <b>#<?php echo $user_data['id'] ?></b>
+      <?php echo $user_data['username'] ?> | <a href="profile.php?user=<?php echo $user_data['username'] ?>">View Profile</a>
+          <?php }
+     }
+     ?>
  </body>
  </html>
-
-
-
-

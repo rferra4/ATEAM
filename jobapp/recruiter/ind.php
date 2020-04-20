@@ -1,3 +1,5 @@
+<!-- "home" page for the create listings -->
+
 <?php include 'inc/rheader2.php' ?>
 
 <!DOCTYPE html>

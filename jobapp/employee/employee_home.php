@@ -1,3 +1,5 @@
+<!-- employee home page-->
+
 <?php include 'inc/eheader2.php'; ?>
       <div class="jumbotron">
         <h1 class="display-4">Employee HOME PAGE</h1>

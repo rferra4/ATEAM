@@ -1,3 +1,5 @@
+<!-- class to load/send data from database to be displayed on the employee_letter page-->
+
 <?php
 class Letter{
     private $db;

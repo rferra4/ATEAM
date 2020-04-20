@@ -1,3 +1,5 @@
+<!-- functions pertaining to the frontend data regarding jobs and related info -->
+
 <?php
     class Job{
         private $db;
@@ -7,7 +9,6 @@
 
         }
 
-        //Get all jobs
         public function getAllJobs(){
             $this->db->query("SELECT Job_Opening.*
                         FROM Job_Opening
@@ -47,8 +48,6 @@
             $this->db->query("SELECT *
                         FROM Company ");
 
-
-            //assign result set
             $results = $this->db->resultSet();
 
             return $results;
@@ -62,9 +61,6 @@
             WHERE Job_Opening.Company_ID = $category
             ORDER BY Job_Opening.Date DESC
             ");
-
-
-        //assign result set
         $results = $this->db->resultSet();
 
         return $results;
@@ -90,7 +86,7 @@
 
             return $row;
         }
-
+//Search filter
         public function getComboResults($Field, $State, $Education){
             $combo = " ";
             if ($Field != "" && $State != "" && $Education != ""){

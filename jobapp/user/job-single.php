@@ -1,3 +1,5 @@
+<!-- see employee's similar file-->
+
 <?php include 'inc/uheader.php'; ?>
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
@@ -19,4 +21,4 @@
 
 
 
-<?php include '../templates/inc/footer.php'; ?>
+<?php include '../templates/inc/ufooter.php'; ?>

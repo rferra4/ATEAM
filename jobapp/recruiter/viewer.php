@@ -1,3 +1,7 @@
+<!--not yet fully implemented...page that loads info from Database to view the applicants per job
+-->
+
+
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
 

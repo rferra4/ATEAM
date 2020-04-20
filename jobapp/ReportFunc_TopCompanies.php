@@ -1,3 +1,6 @@
+<!-- connect to database and pull top companies-->
+
+
 <?php
 
   require_once "connection.php";

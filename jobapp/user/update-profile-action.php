@@ -1,3 +1,5 @@
+<!-- see employee's similar file-->
+
 <?php
   include 'connection.php';
     if (isset($_POST['update_profile'])) {

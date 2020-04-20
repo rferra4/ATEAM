@@ -1,3 +1,5 @@
+<!-- profile index page -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -90,7 +92,7 @@
                 </td>
             </tr>
         <!-- End while loop -->
-                
+
         <?php endwhile; ?>
             </table>
         </div>
@@ -139,7 +141,7 @@
                 <label>Last Name</label>
                 <input type="text" name="lastname" class="form-control" placeholder="Last Name" value="<?php echo $lastname; ?>">
             </div>
-           
+
             <div class="form-group">
                 <label>Age</label>
                 <input type="text" name="age" class="form-control" placeholder="Age" value="<?php echo $age; ?>">

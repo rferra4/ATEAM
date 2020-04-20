@@ -1,6 +1,8 @@
-<<?php include 'inc/uheader.php'; ?>
+<!-- see employee's similar file-->
+
+<?php include 'inc/uheader.php'; ?>
 <center>
- <h1>Applicant Message Platform</h1>
+ <h1>User Message Platform</h1>
 
  <h3>
    <?php include 'inc/ufooter.php'; ?>

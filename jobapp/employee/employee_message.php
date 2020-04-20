@@ -1,3 +1,5 @@
+<!-- Employee messaging page -->
+
 <?php include 'inc/eheader2.php'; ?>
       <h1 class="display-4">Employee Message Platform</h1>
 

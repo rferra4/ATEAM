@@ -1,3 +1,6 @@
+<!-- populates the page when recruiter clicks the view record button-->
+
+
 <?php include 'inc/rheader2.php' ?>
 
 <?php

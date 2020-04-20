@@ -1,3 +1,6 @@
+<!-- gets info from the Job_Opening table to be displayed on the page thats loaded from the view button on
+the job listing page -->
+
 <?php include 'inc/eheader2.php'; ?>
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
@@ -19,4 +22,4 @@
 
 
 
-<?php include '../templates/inc/footer.php'; ?>
+<?php include '../templates/inc/efooter.php'; ?>

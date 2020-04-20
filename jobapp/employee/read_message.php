@@ -1,3 +1,5 @@
+<!-- page where employee can view/read selectd message -->
+
 <?php include 'inc/eheader2.php'; ?>
       <h1 class="display-4">Read a message</h1>
 

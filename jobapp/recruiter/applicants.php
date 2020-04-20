@@ -1,3 +1,7 @@
+<!-- recruiter page to view applicants and send reminders
+not fully implemented -->
+
+
 <?php include 'inc/rheader2.php'; ?>
 <!DOCTYPE html>
 <html>

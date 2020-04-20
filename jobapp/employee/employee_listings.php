@@ -1,3 +1,6 @@
+
+<!-- Job Listing page w/ filter for employees -->
+
 <?php include_once '../config/init.php';?>
 <?php include_once '../lib/Job.php'; ?>
 <?php include 'inc/eheader2.php';?>
@@ -122,7 +125,7 @@
 
 
 
-  
+
 
     <?php
 

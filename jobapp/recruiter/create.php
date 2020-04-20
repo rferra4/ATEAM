@@ -1,3 +1,5 @@
+<!-- create listings page -->
+
 <?php include 'inc/rheader2.php' ?>
 <?php
 // Include config file

@@ -1,3 +1,5 @@
+<!-- template creation to be used throughout project to grab info fro database->
+
 <?php class Template{
     protected $template;
 

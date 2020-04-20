@@ -2,6 +2,6 @@
 <p>&copy; Job Board </p>
 </footer>
 
-</div> <!-- /container -->
+</div>
 </body>
 </html>

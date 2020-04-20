@@ -1,3 +1,5 @@
+<!-- see employee's similar file-->
+
 <?php include 'inc/uheader2.php'; ?>
 <center>
  <h1>User Home Page</h1>

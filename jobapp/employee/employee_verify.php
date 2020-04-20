@@ -1,3 +1,4 @@
+<!-- verify employee ID number page -->
 
 <form class="form" method="post" name="login">
     <h1 class="login-title">Enter Employee ID Number to access</h1>

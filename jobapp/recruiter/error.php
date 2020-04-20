@@ -1,3 +1,6 @@
+<!-- displays errors from the create listing process -->
+
+
 <?php include 'inc/rheader2.php' ?>
 
 <!DOCTYPE html>

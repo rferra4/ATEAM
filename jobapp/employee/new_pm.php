@@ -1,3 +1,5 @@
+<!-- page where an employee can start a new message  -->
+
 <?php
   include 'inc/uheader.php';
 ?>

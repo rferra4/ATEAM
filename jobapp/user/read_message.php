@@ -1,4 +1,6 @@
-<<?php include 'user/inc/uheader.php'; ?>
+<!-- see employee's similar file-->
+
+<?php include 'user/inc/uheader.php'; ?>
 <center>
  <h1>Read a PM</h1>
 

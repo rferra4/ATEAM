@@ -1,3 +1,4 @@
+<!-- employee job application page -->
 <?php include 'inc/eheader2.php'; ?>
 <html>
 <head>

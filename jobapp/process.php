@@ -1,3 +1,6 @@
+<!-- database constants -->
+
+
 <?php
 
 //start session
@@ -79,7 +82,7 @@ if (isset($_GET['edit'])){
         $address = $row['address'];
         $education= $row['education'];
         $info = $row['info'];
-        
+
         $username = $row2['username'];
         $email = $row2['email'];
         $password = $row2['password'];

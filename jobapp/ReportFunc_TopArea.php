@@ -1,3 +1,6 @@
+<!-- connect to database and pull top area applied to -->
+
+
 <?php
 
     require_once "connection.php";

@@ -1,3 +1,6 @@
+<!-- database constants -->
+
+
 <link rel="stylesheet" href="css/style.css"/>
 
 <?php

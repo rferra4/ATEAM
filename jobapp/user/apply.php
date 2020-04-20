@@ -1,3 +1,5 @@
+<!-- user form for job application -->
+
 <?php include 'inc/uheader.php'; ?>
 <html>
 <head>

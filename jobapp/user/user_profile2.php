@@ -1,4 +1,6 @@
-<<?php include 'inc/uheader2.php'; ?>
+<!-- see employee's similar file-->
+
+<?php include 'inc/uheader2.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-    
+
 
 
 <div class="hero">
@@ -29,13 +31,13 @@
       </form>
     </div>
 </div>
-    
+
     </div>
-    
+
 
 
 </body>
-    
+
 <?php include 'inc/ufooter.php'; ?>
-    
+
 </html>
