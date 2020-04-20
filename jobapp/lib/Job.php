@@ -57,9 +57,9 @@
         }
 
 
-        public function getJob($Opening_ID){
-            $this->db->query("SELECT * FROM Job_Opening WHERE Opening_ID = :Opening_ID");
-            $this->db->bind(':Opening_ID', $Opening_ID);
+        public function getJob($id){
+            $this->db->query("SELECT * FROM Job_Opening WHERE id = :id");
+            $this->db->bind(':id', $id);
 
 
             $row = $this->db->single();

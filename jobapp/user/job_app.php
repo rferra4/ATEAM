@@ -8,7 +8,7 @@ $template = new Template('apply.php');
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 
-
+$company = isset()
 
 
 $template->job = $job->getJob($id);

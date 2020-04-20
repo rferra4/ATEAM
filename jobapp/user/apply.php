@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <h4> <p>Job Title: <?php echo $job->name; ?></p>
-<p>Hiring Company: <?php echo $job->company; ?></p>
 
 <p>Job ID#: <?php echo $job->id; ?></p></h4>
 

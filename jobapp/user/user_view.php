@@ -1,6 +1,6 @@
 <?php include_once '../config/init.php';?>
-<?php include_once '../lin/Job.php'; ?>
-<?php include 'inc/eheader.php';?>
+<?php include_once '../lib/Job.php'; ?>
+<?php include 'inc/uheader.php';?>
 
 <html>
   <div class="jumbotron">
@@ -109,7 +109,7 @@
 
       </div>
       <div class = "col-md-2">
-              <a class = "btn btn-default" href = "job.php?Opening_ID=<?php echo $job->Opening_ID;
+              <a class = "btn btn-default" href = "job.php?id=<?php echo $job->id;
               ?>">View</a>
       </div>
   </div>
@@ -117,13 +117,13 @@
 
 </html>
 
-  <?php include 'inc/efooter.php'; ?>
+  <?php include 'inc/ufooter.php'; ?>
 
     <?php
 
     session_start();
 
-    if(!isset($_SESSION['employee_login'])) //check unauthorize user not direct access in "employee_home.php" page
+    if(!isset($_SESSION['user_login'])) //check unauthorize user not direct access in "employee_home.php" page
     {
      header("location: ../index.php");
     }
@@ -133,15 +133,15 @@
      header("location: ../admin/admin_home.php");
     }
 
-    if(isset($_SESSION['user_login'])) //check user login user not access in "employee_home.php" page
+    if(isset($_SESSION['employee_login'])) //check user login user not access in "employee_home.php" page
     {
-     header("location: ../user/user_home.php");
+     header("location: ../employee/employee_home.php");
     }
 
-    if(isset($_SESSION['employee_login']))
+    if(isset($_SESSION['user_login']))
     {
     ?>
-     Welcome,
+     
     <?php
      echo $_SESSION['employee_login'];
     }

@@ -4,20 +4,15 @@
 <?php
 $job = new Job;
 
-$template = new Template('user/user_view.php');
-
-$category = isset($_GET['category']) ? $_GET['category'] : null;
-
-if($category){
-    $template->Job_Opening = $job->getByCategory($category);
+$template = new Template('recruiter/view_applicants.php');
 
 
-}else{
+
+
     $template->title = 'Latest Jobs ';
     $template->Job_Opening = $job->getAllJobs();
-}
 
 
-$template->Company = $job->getCategories();
+
 
 echo $template;

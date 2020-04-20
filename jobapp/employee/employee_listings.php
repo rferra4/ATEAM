@@ -1,5 +1,5 @@
 <?php include_once '../config/init.php';?>
-<?php include_once '../lin/Job.php'; ?>
+<?php include_once '../lib/Job.php'; ?>
 <?php include 'inc/eheader.php';?>
 
 <html>
