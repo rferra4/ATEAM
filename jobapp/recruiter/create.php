@@ -4,8 +4,8 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$name = $address = $company = $salary = "";
-$name_err = $address_err = $company_err = $salary_err = "";
+$name = $address = $company = $description = $salary = "";
+$name_err = $address_err = $company_err = $description_err = $salary_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -27,33 +27,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $input_company = trim($_POST["company"]);
     if(empty($input_company)){
-        $address_err = "Please enter a Company.";
+        $company_err = "Please enter a company.";
     } else{
         $company = $input_company;
+    }
+
+    $input_description = trim($_POST["description"]);
+    if(empty($input_description)){
+        $description_err = "Please enter a description.";
+    } else{
+        $description = $input_description;
     }
 
     // Validate salary
     $input_salary = trim($_POST["salary"]);
     if(empty($input_salary)){
-        $salary_err = "Please enter a Company.";
+        $salary_err = "Please enter a Salary.";
     } else{
         $salary = $input_salary;
     }
 
 
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($company_err) && empty($salary_err)){
+    if(empty($name_err) && empty($address_err) && empty($company_err) && empty($description_err) && empty($salary_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO Job_Opening (name, address, company, salary) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO Job_Opening (name, address, company, description, salary) VALUES (?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_address, $param_company, $param_salary);
+            mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_address, $param_company, $param_description, $param_salary);
 
             // Set parameters
             $param_name = $name;
             $param_address = $address;
             $param_company = $company;
+            $param_description = $description;
 
             $param_salary = $salary;
 
@@ -104,6 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
                             <span class="help-block"><?php echo $name_err;?></span>
                         </div>
+
                         <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
                             <label>Address</label>
                             <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
@@ -113,6 +122,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <label>Company</label>
                             <textarea name="company" class="form-control"><?php echo $company; ?></textarea>
                             <span class="help-block"><?php echo $company_err;?></span>
+                        </div>
+                        <div class="form-group <?php echo (!empty($description_err)) ? 'has-error' : ''; ?>">
+                            <label>Description</label>
+                            <textarea name="description" class="form-control"><?php echo $description; ?></textarea>
+                            <span class="help-block"><?php echo $description_err;?></span>
                         </div>
                         <div class="form-group <?php echo (!empty($salary_err)) ? 'has-error' : ''; ?>">
                             <label>Salary</label>

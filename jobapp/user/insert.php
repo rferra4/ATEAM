@@ -18,8 +18,8 @@ $jobID = mysqli_real_escape_string($link, $_REQUEST['jobID']);
 // Attempt insert query execution
 $sql = "INSERT INTO Applicants (first_name, last_name, email, jobID) VALUES ('$first_name', '$last_name', '$email', '$jobID')";
 if(mysqli_query($link, $sql)){
-    echo "Application submitted successfully. Redirecting you to the home page...";
-    header("refresh:3;user_home.php"); //refresh 4 second and redirect to index.php page
+    echo "Application submitted successfully. Expect to hear back from us by email. Redirecting you to the home page...";
+    header("refresh:4;user_home.php"); //refresh 4 second and redirect to index.php page
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

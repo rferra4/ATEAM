@@ -4,15 +4,12 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../css/styles.css"/>
 </head>
+<h4> <p>Job Title: <?php echo $job->name; ?></p>
+<p>Hiring Company: <?php echo $job->company; ?></p>
 
+<p>Job ID#: <?php echo $job->id; ?></p></h4>
 
-
-
-
-<p>Job Title: <?php echo $job->company; ?></p>
-<p>Job ID#: <?php echo $job->id; ?></p>
-
-<body>
+<body><center>
 <form action="insert.php" method="post">
     <p>
         <label for="firstName">First Name:</label>
@@ -33,7 +30,7 @@
     </p>
     <input type="submit" value="Submit">
 </form>
-</body>
+</center></body>
 
 
 
