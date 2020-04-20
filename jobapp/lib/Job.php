@@ -17,6 +17,31 @@
             $results = $this->db->resultSet();
             return $results;
         }
+        public function getAllApplicants(){
+            $this->db->query("SELECT Applicants.*
+                        FROM Applicants
+                        ");
+            //assign result set
+            $results = $this->db->resultSet();
+            return $results;
+        }
+
+
+        public function twentyApplicationsChecker(){
+        $this->db->query("SELECT * FROM Applicants WHERE Applicants_ID = :Applicant_ID");
+        $this->db->bind(':Applicant_ID', $Applicants_ID);
+
+        $row = $result->fetch();
+
+        $numappliedjobs = $row["NumberAppliedJobs"];
+
+        // If number of applied jobs is greater than or equal to 1, then deny application request
+        if($numappliedjobs >= 20){
+          return false;
+        }
+        return true;
+
+      }
 
         public function getCategories(){
             $this->db->query("SELECT *
@@ -121,22 +146,7 @@
               $results = $this->db->resultSet();
               return $results;
         }
-        public function twentyApplicationsChecker()
-      {
-        $this->db->query("SELECT * FROM Applicants WHERE Applicants_ID = :Applicant_ID");
-        $this->db->bind(':Applicant_ID', $Applicants_ID);
 
-        $row = $result->fetch();
-
-        $numappliedjobs = $row["NumberAppliedJobs"];
-
-        // If number of applied jobs is greater than or equal to 1, then deny application request
-        if($numappliedjobs >= 20){
-          return false;
-        }
-        return true;
-
-      }
 
 
     }

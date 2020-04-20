@@ -99,7 +99,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                         <p class="form-control-static"><?php echo $row["salary"]; ?></p>
                     </div>
 
-
+                    <p><a href="viewer.php" class="btn btn-primary">View Applicants</a></p>
                     <p><a href="ind.php" class="btn btn-primary">Back</a></p>
                 </div>
             </div>
