@@ -134,13 +134,8 @@ CREATE TABLE `data` (
   `info` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `data`
---
 
-INSERT INTO `data` (`id`, `firstname`, `lastname`, `username`, `email`, `password`, `age`, `gender`, `city`, `state`, `address`, `education`, `info`) VALUES
-(4, 'u', 'u', 'u', 'u', 'u', 7, 'i', 'i', 'i', 'i', 'i', 'I'),
-(5, '1', '1', 'ateam', 'ateam@gmail.com', 'i', 8, 'i', 'i', 'I', '7i', 'i', 'I');
+
 
 -- --------------------------------------------------------
 
@@ -162,18 +157,6 @@ CREATE TABLE `Employee` (
 -- Dumping data for table `Employee`
 --
 
-INSERT INTO `Employee` (`Employee_ID`, `username`, `password`, `First_Name`, `Last_Name`, `email`, `create_datetime`) VALUES
-(1, '', '', 'John ', 'Doe', 'john@gmail.com', NULL),
-(2, '', '', 'Dani', 'Rodriguez', 'dani@hotmail.com', NULL),
-(3, '', '', 'Jose', 'Rodriguez', 'JD@yahoo.com', NULL),
-(4, 'rach', '098f6bcd4621d373cade4e832627b4f6', 'rach', 'rach', 'rach@gmail.com', '2020-04-07 01:00:51'),
-(5, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test', 'test', 'test@gmail.com', '2020-04-07 01:22:28'),
-(6, 'tester', 'f5d1278e8109edd94e1e4197e04873b9', 'tester', 'tester', 'tester@gmail.com', '2020-04-07 01:23:30'),
-(7, '', '', 'Sim', 'Thapa', 'ST@gmail.com', NULL),
-(8, '', '', 'Santi', 'Salas', 'st@hotmail.com', NULL),
-(9, 'phil', 'd14ffd41334ec4b4b3f2c0d55c38be6f', 'phil', 'phil', 'p@gmail.com', '2020-04-08 22:42:18'),
-(11, 'one', 'f97c5d29941bfb1b2fdab0874906ab82', 'one', 'one', 'one@gmail.com', '2020-04-09 01:00:47'),
-(12, 'r', '4b43b0aee35624cd95b910189b3dc231', 'r', 'r', 'r', '2020-04-09 01:56:15');
 
 -- --------------------------------------------------------
 
@@ -246,18 +229,7 @@ INSERT INTO `masterlogin` (`id`, `First_Name`, `Last_Name`, `username`, `email`,
 (11, '', '', 'ateam', 'ateam@gmail.com', '123456', 'recruiter'),
 (12, '', '', 'rachel', 'rachel@gmail.com', '1234567', 'employee'),
 (13, '', '', 'hello', 'hello@gmail.com', 'hello123', 'user'),
-(14, '', '', 'tester', 'tester@gmail.com', 'tester123', 'employee'),
-(15, '', '', 'test1', 'test1@gmail.com', 'test12345', 'user'),
-(16, '', '', 'user1', 'user@gmail.com', 'user123', 'user'),
-(17, '', '', 'testt', 'testt@gmail.com', '123456', 'user'),
-(18, '', '', 'testtt', 'testtt@gmail.com', '123456', 'user'),
-(19, '', '', 'hi', 'hi@gmail.com', '123456', 'user'),
-(20, '', '', 'test2', 'test2@gmail.com', '123456', 'employee'),
-(21, '', '', 'username', 'username@gmail.com', '123456', 'user'),
-(22, '', '', 'h', 'h@gmail.com', '123456', 'employee'),
-(23, '', '', 'j', 'j@gmail.com', '123456', 'recruiter'),
-(24, '', '', 'k', 'k@gmail.com', '123456', 'recruiter'),
-(25, '', '', 'user2', 'user2@gmail.com', '123456', 'user');
+
 
 -- --------------------------------------------------------
 
