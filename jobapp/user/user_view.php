@@ -1,4 +1,3 @@
-@@ -1,155 +0,0 @@
 <?php include_once '../config/init.php';?>
 <?php include_once '../lin/Job.php'; ?>
 <?php include 'inc/eheader.php';?>
