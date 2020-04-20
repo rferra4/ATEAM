@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
-    
+
     <body>
         <?php require_once '../process.php'; ?>
-        
+
 
         <!-------------------------------------------->
         <!--php for sending edit/delete alert message->
@@ -35,7 +35,7 @@
         <!-------------------------------------------->
         <?php
             //connect to database
-            $mysqli = new mysqli('localhost', 'root', 'mysql','project_schema') or die(mysqli_error($mysqli));
+            $mysqli = new mysqli('localhost', 'root', 'root','project_schema') or die(mysqli_error($mysqli));
 
             //selecting everything from "data" table and storing as $result
             $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
@@ -93,7 +93,7 @@
                 </td>
             </tr>
         <!-- End while loop -->
-                
+
         <?php endwhile; ?>
             </table>
         </div>
@@ -142,7 +142,7 @@
                 <label>Last Name</label>
                 <input type="text" name="lastname" class="form-control" placeholder="Last Name" value="<?php echo $lastname; ?>">
             </div>
-           
+
             <div class="form-group">
                 <label>Age</label>
                 <input type="text" name="age" class="form-control" placeholder="Age" value="<?php echo $age; ?>">
