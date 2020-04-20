@@ -4,13 +4,10 @@
 <?php
 $job = new Job;
 
-$template = new Template('recruiter/view_applicants.php');
+$template = new Template('view_applicants.php');
 
 
-
-
-    $template->title = 'Latest Jobs ';
-    $template->Job_Opening = $job->getAllJobs();
+$template->job = $job->getAllApplicants($id);
 
 
 

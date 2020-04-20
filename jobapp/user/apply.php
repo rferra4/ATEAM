@@ -27,6 +27,11 @@
         <label for="jobid">Confirm Job ID#:</label>
         <input type="text" name="jobID" id="jobid">
     </p>
+
+    <p>
+        <label for="useroremployee">Are you a current Employee of this company?(Y/N):</label>
+        <input type="text" name="useroremployee" id="useroremployee">
+    </p>
     <input type="submit" value="Submit">
 </form>
 </center></body>
