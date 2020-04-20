@@ -1,4 +1,4 @@
-<<?php include 'inc/uheader.php'; ?>
+<<?php include 'inc/uheader2.php'; ?>
 <center>
  <h1>User Page4</h1>
 

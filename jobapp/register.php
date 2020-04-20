@@ -55,9 +55,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
 
    else if(!isset($errorMsg))
    {
-    $insert_stmt=$db->prepare("INSERT INTO masterlogin(username,email,password,role) VALUES(:uname,:uemail,:upassword,:urole)");
-    $insert_stmt=$db->prepare("INSERT INTO data(username,email,password) VALUES(:uname,:uemail,:upassword)"); //sql insert query
-//sql insert query
+    $insert_stmt=$db->prepare("INSERT INTO masterlogin(username,email,password,role) VALUES(:uname,:uemail,:upassword,:urole)"); //sql insert query
     $insert_stmt->bindParam(":uname",$username);
     $insert_stmt->bindParam(":uemail",$email);     //bind all parameter
     $insert_stmt->bindParam(":upassword",$password);

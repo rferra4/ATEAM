@@ -1,4 +1,4 @@
-<?php include 'inc/rheader.php' ?>
+<?php include 'inc/rheader2.php' ?>
 
 <?php
 // Check existence of id parameter before processing further

@@ -1,4 +1,4 @@
-<?php include 'inc/rheader.php' ?>
+<?php include 'inc/rheader2.php' ?>
 <?php
 // Include config file
 require_once "config.php";

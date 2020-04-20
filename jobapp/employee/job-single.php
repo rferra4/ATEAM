@@ -1,4 +1,4 @@
-<?php include 'inc/eheader.php'; ?>
+<?php include 'inc/eheader2.php'; ?>
 <?php include_once '../config/init.php'; ?>
 <?php include_once '../lib/Job.php'; ?>
 <h2 class="page=header"><?php echo $job->name; ?> </h2>

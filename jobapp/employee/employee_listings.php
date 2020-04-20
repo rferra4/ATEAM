@@ -1,8 +1,13 @@
 <?php include_once '../config/init.php';?>
 <?php include_once '../lib/Job.php'; ?>
-<?php include 'inc/eheader.php';?>
+<?php include 'inc/eheader2.php';?>
+
 
 <html>
+    <center>
+ <h1>User Home Page</h1>
+
+ <h3>
   <div class="jumbotron">
     <h1 class="display-4">Search Job Listings</h1>
     <br>
@@ -115,9 +120,9 @@
   </div>
   <?php endforeach; ?>
 
-</html>
 
-  <?php include 'inc/efooter.php'; ?>
+
+  
 
     <?php
 
@@ -151,5 +156,5 @@
    </center>
 
 
-
-<?php}?>
+?>
+<?php include 'inc/efooter.php'; ?>
