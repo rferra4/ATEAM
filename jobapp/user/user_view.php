@@ -1,6 +1,6 @@
 <?php include_once '../config/init.php';?>
 <?php include_once '../lib/Job.php'; ?>
-<?php include 'inc/uheader.php';?>
+<?php include 'inc/uheader2.php';?>
 
 <html>
   <div class="jumbotron">

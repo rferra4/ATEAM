@@ -1,4 +1,4 @@
-<?php include 'inc/eheader.php'; ?>
+<?php include 'inc/eheader2.php'; ?>
 <html>
 <head>
     <meta charset="utf-8"/>

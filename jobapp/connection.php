@@ -1,7 +1,7 @@
 <?php
 $db_host="localhost"; //localhost server
 $db_user="root"; //database username
-$db_password="root"; //database password
+$db_password="mysql"; //database password
 $db_name="project_schema"; //database name
 
 try
