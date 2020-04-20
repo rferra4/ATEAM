@@ -13,7 +13,6 @@ require_once "connection.php";
 if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set this
 {
  $username = $_REQUEST['txt_username']; //textbox name "txt_username"
- $First_Name = $_REQUEST['txt_first'];
 
  $email  = $_REQUEST['txt_email']; //textbox name "txt_email"
  $password = $_REQUEST['txt_password']; //textbox name "txt_password"
