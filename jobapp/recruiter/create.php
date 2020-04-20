@@ -1,4 +1,5 @@
 <!-- create listings page -->
+<?php include_once '../lib/Email.php';?>
 
 <?php include 'inc/rheader2.php' ?>
 <?php
