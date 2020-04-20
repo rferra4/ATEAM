@@ -9,7 +9,7 @@
     <p class="lead">Start connecting today!</p>
     <form method = "GET" action = "viewer.php">
 
-      <select name= "field" class = "form-control">
+      <select name= "Field" class = "form-control">
       <option value = "" > Choose Job Field </option>
       <option value="Technology"> Technology </option>
       <option value="Engineering"> Engineering </option>
@@ -25,7 +25,7 @@
       <br>
 
 
-      <select name= "state" class = "form-control">
+      <select name= "State" class = "form-control">
       <option value = "" > Choose Location </option>
       <option value="AL"> AL </option>
       <option value="AK"> AK </option>
@@ -80,7 +80,7 @@
       </select>
       <br>
 
-      <select name= "education" class = "form-control">
+      <select name= "Education" class = "form-control">
       <option value = "" > Choose Education Requirement </option>
       <option value="No Education"> No Education Required </option>
       <option value="High School"> High School Education </option>
@@ -100,11 +100,9 @@
   <?php foreach($Job_Opening as $job): ?>
   <div class="row marketing">
       <div class="col-md-10">
-        <h4><?php echo $job->c_name; ?></h4>
-        <p><?php echo $job->Title; ?></p>
-        <p><?php echo $job->Field; ?></p>
-        <p><?php echo $job->Salary; ?></p>
-        <p><?php echo $job->c_add; ?></p>
+        <p><?php echo $job->name; ?></p>
+        <p><?php echo $job->Education; ?></p>
+        <p><?php echo $job->salary; ?></p>
 
 
       </div>
@@ -141,7 +139,7 @@
     if(isset($_SESSION['user_login']))
     {
     ?>
-     
+
     <?php
      echo $_SESSION['employee_login'];
     }

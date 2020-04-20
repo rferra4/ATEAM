@@ -19,7 +19,7 @@ $useroremployee = mysqli_real_escape_string($link, $_REQUEST['useroremployee']);
 $sql = "INSERT INTO Applicants (first_name, last_name, email, jobID, useroremployee) VALUES ('$first_name', '$last_name', '$email', '$jobID', '$useroremployee')";
 if(mysqli_query($link, $sql)){
     echo "Application submitted successfully. Expect to hear back from us by email. Redirecting you to the home page...";
-    header("refresh:4;user_home.php"); //refresh 4 second and redirect to index.php page
+    header("refresh:4;employee_home.php"); //refresh 4 second and redirect to index.php page
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

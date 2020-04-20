@@ -100,16 +100,16 @@
   <?php foreach($Job_Opening as $job): ?>
   <div class="row marketing">
       <div class="col-md-10">
-        <h4><?php echo $job->c_name; ?></h4>
-        <p><?php echo $job->Title; ?></p>
+        <h4><?php echo $job->company; ?></h4>
+        <p><?php echo $job->name; ?></p>
         <p><?php echo $job->Field; ?></p>
         <p><?php echo $job->Salary; ?></p>
-        <p><?php echo $job->c_add; ?></p>
+        <p><?php echo $job->address; ?></p>
 
 
       </div>
       <div class = "col-md-2">
-              <a class = "btn btn-default" href = "job.php?Opening_ID=<?php echo $job->Opening_ID;
+              <a class = "btn btn-default" href = "job.php?id=<?php echo $job->id;
               ?>">View</a>
       </div>
   </div>

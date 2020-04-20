@@ -4,8 +4,8 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$name = $address = $company = $description = $salary = "";
-$name_err = $address_err = $company_err = $description_err = $salary_err = "";
+$name = $address = $company = $description = $salary = $sc_email = $Field = $State = $Education = "";
+$name_err = $address_err = $company_err = $description_err = $salary_err = $sc_email_err = $Field_err = $State_err = $Education_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -48,14 +48,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
 
+
+    $input_sc_email = trim($_POST["sc_email"]);
+    if(empty($input_sc_email)){
+        $sc_email_err = "Please enter your email.";
+    } else{
+        $sc_email = $input_sc_email;
+    }
+
+
+    $input_Field = trim($_POST["Field"]);
+    if(empty($input_Field)){
+        $Field_err = "Please enter a Field.";
+    } else{
+        $Field = $input_Field;
+    }
+
+
+
+
+
+    $input_State = trim($_POST["State"]);
+    if(empty($input_State)){
+        $State_err = "Please enter a State.";
+    } else{
+        $State = $input_State;
+    }
+
+
+        $input_Education = trim($_POST["Education"]);
+        if(empty($input_Education)){
+            $Education_err = "Please enter the desired Education level achieved.";
+        } else{
+            $Education = $input_Education;
+        }
+
+
+
+
+
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($company_err) && empty($description_err) && empty($salary_err)){
+    if(empty($name_err) && empty($address_err) && empty($company_err) && empty($description_err) && empty($salary_err)
+  && empty($sc_email_err) && empty($Field_err) && empty($State_err) && empty($Education_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO Job_Opening (name, address, company, description, salary) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Job_Opening (name, address, company, description, salary, sc_email, Field, State, Education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssss", $param_name, $param_address, $param_company, $param_description, $param_salary);
+            mysqli_stmt_bind_param($stmt, "sssssssss", $param_name, $param_address, $param_company, $param_description, $param_salary, $param_sc_email, $param_Field, $param_State, $param_Education);
 
             // Set parameters
             $param_name = $name;
@@ -63,8 +103,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_company = $company;
             $param_description = $description;
 
-            $param_salary = $salary;
 
+            $param_salary = $salary;
+            $param_sc_email = $sc_email;
+            $param_Field = $Field;
+            $param_State = $State;
+            $param_Education = $Education;
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
@@ -132,6 +176,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <label>Salary</label>
                             <input type="text" name="salary" class="form-control" value="<?php echo $salary; ?>">
                             <span class="help-block"><?php echo $salary_err;?></span>
+                        </div>
+
+
+
+                        <div class="form-group <?php echo (!empty($sc_email_err)) ? 'has-error' : ''; ?>">
+                            <label>Search Recruiter Email</label>
+                            <input type="text" name="sc_email" class="form-control" value="<?php echo $sc_email; ?>">
+                            <span class="help-block"><?php echo $sc_email_err;?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($Field_err)) ? 'has-error' : ''; ?>">
+                            <label>Field</label>
+                            <input type="text" name="Field" class="form-control" value="<?php echo $Field; ?>">
+                            <span class="help-block"><?php echo $Field_err;?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($State_err)) ? 'has-error' : ''; ?>">
+                            <label>State</label>
+                            <input type="text" name="State" class="form-control" value="<?php echo $State; ?>">
+                            <span class="help-block"><?php echo $State_err;?></span>
+                        </div>
+
+                        <div class="form-group <?php echo (!empty($Education_err)) ? 'has-error' : ''; ?>">
+                            <label>Education</label>
+                            <input type="text" name="Education" class="form-control" value="<?php echo $Education; ?>">
+                            <span class="help-block"><?php echo $Education_err;?></span>
                         </div>
 
                         <input type="submit" class="btn btn-primary" value="Submit">

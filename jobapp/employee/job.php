@@ -4,9 +4,10 @@
 <?php
 $job = new Job;
 
-$template = new Template('apply.php');
+$template = new Template('job-single.php');
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
+
 
 
 

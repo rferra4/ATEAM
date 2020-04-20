@@ -9,9 +9,8 @@
 
         //Get all jobs
         public function getAllJobs(){
-            $this->db->query("SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            $this->db->query("SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company ON Job_Opening.Company_ID = Company.ID_Number
                         ORDER BY Job_Opening.Date DESC
                         ");
             //assign result set
@@ -67,67 +66,54 @@
             return $row;
         }
 
-        public function getComboResults($field, $state, $education){
+        public function getComboResults($Field, $State, $Education){
             $combo = " ";
-            if ($field != "" && $state != "" && $education != ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            if ($Field != "" && $State != "" && $Education != ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        WHERE Job_Opening.Field = '$field'
-                        AND Job_Opening.Education = '$education'
-                        AND Job_Opening.State = '$state'
+
+                        WHERE Job_Opening.Field = '$Field'
+                        AND Job_Opening.Education = '$Education'
+                        AND Job_Opening.State = '$State'
                         ORDER BY Job_Opening.Date DESC";
             }
-            else if($field != "" && $state == "" && $education == ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            else if($Field != "" && $State == "" && $Education == ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        WHERE Job_Opening.Field = '$field'
+                        WHERE Job_Opening.Field = '$Field'
                         ORDER BY Job_Opening.Date DESC";
             }
-            else if ($field == "" && $state == "" && $education != ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            else if ($Field == "" && $State == "" && $Education != ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        AND Job_Opening.Education = '$education'
+                        WHERE Job_Opening.Education = '$Education'
                         ORDER BY Job_Opening.Date DESC";
             }
-            else if ($field == "" && $state != "" && $education == ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            else if ($Field == "" && $State != "" && $Education == ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        AND Job_Opening.State = '$state'
+                        WHERE Job_Opening.State = '$State'
                         ORDER BY Job_Opening.Date DESC";
             }
-            else if ($field != "" && $state != "" && $education == ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            else if ($Field != "" && $State != "" && $Education == ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        WHERE Job_Opening.Field = '$field'
-                        AND Job_Opening.State = '$state'
+                        WHERE Job_Opening.Field = '$Field'
+                        AND Job_Opening.State = '$State'
                         ORDER BY Job_Opening.Date DESC";
             }
-            else if ($field != "" && $state == "" && $education != ""){
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+            else if ($Field != "" && $State == "" && $Education != ""){
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        WHERE Job_Opening.Field = '$field'
-                        AND Job_Opening.Education = '$education'
+                        WHERE Job_Opening.Field = '$Field'
+                        AND Job_Opening.Education = '$Education'
                         ORDER BY Job_Opening.Date DESC";
             }
             else{
-              $combo = "SELECT Job_Opening.*, Company.Name AS c_name, Company.Address as c_add
+              $combo = "SELECT Job_Opening.*
                         FROM Job_Opening
-                        INNER JOIN Company
-                        ON Job_Opening.Company_ID = Company.ID_Number
-                        AND Job_Opening.Education = '$education'
-                        AND Job_Opening.State = '$state'
+                        WHERE Job_Opening.Education = '$Education'
+                        AND Job_Opening.State = '$State'
                         ORDER BY Job_Opening.Date DESC";
             }
 
