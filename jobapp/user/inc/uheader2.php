@@ -57,7 +57,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="user_home.php">Home</a></li>
         <li><a href="viewer.php">Job Listings</a></li>
-        <li><a href="user_profile.php">Profile</a></li>
+        <li><a href="user_message.php">Messaging</a></li>
         <li><a href="user_page4.php">Page4</a></li>
         <li><a href="user_page5.php">Page5</a></li>
       </ul>
