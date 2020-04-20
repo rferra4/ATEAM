@@ -1,5 +1,5 @@
 JOB BOARD
-        is an online job search platform with functionality for users, employees, company recruiters, and corporate administrators. 
+        is an online job search platform with functionality for users, employees, company recruiters, and administrators. 
 	
 	FEATURES: 
 	
