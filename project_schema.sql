@@ -375,3 +375,68 @@ ALTER TABLE `masterlogin`
 --
 ALTER TABLE `Search_Committee`
   MODIFY `SearchCommittee_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  
+  -- phpMyAdmin SQL Dump
+-- version 4.9.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 20, 2020 at 11:15 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `project_schema`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dm`
+--
+
+CREATE TABLE `dm` (
+  `dmid` bigint(20) NOT NULL,
+  `title` text NOT NULL,
+  `user1` text NOT NULL,
+  `user2` text NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` text NOT NULL,
+  `user1read` tinyint(1) NOT NULL,
+  `user2read` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dm`
+--
+
+INSERT INTO `dm` (`dmid`, `title`, `user1`, `user2`, `message`, `timestamp`, `user1read`, `user2read`) VALUES
+(1, 'test', 'testtest2@test.com', 'testtest@test.com', 'test', '2020-04-19 21:22:34', 1, 0),
+(2, 'test', 'testtest@test.com', 'testtest@test.com', 'trying this!', '11111', 1, 1),
+(3, 'test', 'testtest@test.com', 'testtest@test.com', 'test2', '2020-04-19 21:22:35', 1, 0),
+(4, 'test title', 'testtest@test.com', 'jrous47@lsu.edu', 'test message', '2020-04-19 23:08:22', 1, 0),
+(5, 'test', 'testtest@test.com', 'jrous47@lsu.edu', 'test', '2020-04-19 23:10:03', 1, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `dm`
+--
+ALTER TABLE `dm`
+  ADD PRIMARY KEY (`dmid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `dm`
+--
+ALTER TABLE `dm`
+  MODIFY `dmid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
