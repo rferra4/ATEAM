@@ -8,6 +8,7 @@
 <?php
 require_once '../config/app_config.php';
 
+
 $query = "SELECT * FROM Applicants";
 
 
@@ -22,8 +23,7 @@ if ($result = $mysqli->query($query)) {
         $field4name = $row["Resume"];
         $field5name = $row["StatusOfApplication"];
 
-
-        echo '<html>
+?>
 <head>
 <style>
     table, th, td {

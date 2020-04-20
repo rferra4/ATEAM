@@ -5,13 +5,17 @@
 <?php include 'inc/uheader2.php';?>
 
 <html>
+    <center>
+ <h1>Job Listings Page</h1>
+
+ <h3>
   <div class="jumbotron">
     <h1 class="display-4">Search Job Listings</h1>
     <br>
     <p class="lead">Start connecting today!</p>
     <form method = "GET" action = "viewer.php">
 
-      <select name= "Field" class = "form-control">
+      <select name= "field" class = "form-control">
       <option value = "" > Choose Job Field </option>
       <option value="Technology"> Technology </option>
       <option value="Engineering"> Engineering </option>
@@ -27,7 +31,7 @@
       <br>
 
 
-      <select name= "State" class = "form-control">
+      <select name= "state" class = "form-control">
       <option value = "" > Choose Location </option>
       <option value="AL"> AL </option>
       <option value="AK"> AK </option>
@@ -82,7 +86,7 @@
       </select>
       <br>
 
-      <select name= "Education" class = "form-control">
+      <select name= "education" class = "form-control">
       <option value = "" > Choose Education Requirement </option>
       <option value="No Education"> No Education Required </option>
       <option value="High School"> High School Education </option>
@@ -102,9 +106,11 @@
   <?php foreach($Job_Opening as $job): ?>
   <div class="row marketing">
       <div class="col-md-10">
+        <h4><?php echo $job->company; ?></h4>
         <p><?php echo $job->name; ?></p>
-        <p><?php echo $job->Education; ?></p>
-        <p><?php echo $job->salary; ?></p>
+        <p><?php echo $job->Field; ?></p>
+        <p><?php echo $job->Salary; ?></p>
+        <p><?php echo $job->address; ?></p>
 
 
       </div>
@@ -115,9 +121,7 @@
   </div>
   <?php endforeach; ?>
 
-</html>
 
-  <?php include 'inc/ufooter.php'; ?>
 
     <?php
 
@@ -152,4 +156,5 @@
 
 
 
-<?php}?>
+   ?>
+   <?php include 'inc/ufooter.php'; ?>

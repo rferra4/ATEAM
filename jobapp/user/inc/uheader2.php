@@ -58,8 +58,8 @@
         <li class="active"><a href="user_home.php">Home</a></li>
         <li><a href="viewer.php">Job Listings</a></li>
         <li><a href="user_message.php">Messaging</a></li>
-        <li><a href="user_page4.php">Page4</a></li>
-        <li><a href="user_page5.php">Page5</a></li>
+        <li><a href="user_profile2.php">Profile</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="../logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>

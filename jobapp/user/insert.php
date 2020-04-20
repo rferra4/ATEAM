@@ -1,7 +1,7 @@
 <!-- see employee's similar file-->
 
 <?php
-require_once '../connection.php';
+require_once '../config/app_config.php';
 
 // Escape user inputs for security
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);

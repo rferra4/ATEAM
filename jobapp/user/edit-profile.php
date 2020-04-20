@@ -1,4 +1,5 @@
 <!-- edit profile -->
+<?php include 'inc/uheader2.php'; ?>
 
 <?php
 include 'connection.php';

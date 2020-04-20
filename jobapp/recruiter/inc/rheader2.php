@@ -57,7 +57,6 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="./recruiter_home.php">Home</a></li>
         <li><a href="ind.php">Create Listing</a></li>
-        <li><a href="./recruiter_applicants.php">Applicants</a></li>
         <li><a href="../AdminReport_ChooseCompany.php">Administrative Report</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

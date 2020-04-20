@@ -1,6 +1,6 @@
 <!-- user form for job application -->
 
-<?php include 'inc/uheader.php'; ?>
+<?php include 'inc/uheader2.php'; ?>
 <html>
 <head>
     <meta charset="utf-8"/>

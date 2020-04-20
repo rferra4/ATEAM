@@ -1,6 +1,6 @@
 <!-- see employee's similar file-->
 
-<?php include 'inc/uheader.php'; ?>
+<?php include 'inc/uheader2.php'; ?>
 <center>
  <h1>Read a PM</h1>
 

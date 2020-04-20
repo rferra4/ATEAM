@@ -8,7 +8,7 @@
 
 <html>
     <center>
- <h1>User Home Page</h1>
+ <h1>Job Listings Page</h1>
 
  <h3>
   <div class="jumbotron">
