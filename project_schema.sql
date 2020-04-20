@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 20, 2020 at 08:17 AM
+-- Generation Time: Apr 20, 2020 at 03:17 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -65,7 +65,9 @@ INSERT INTO `Applicants` (`Applicants_ID`, `first_name`, `last_name`, `email`, `
 (29, 'mon', 'mon', 'mon@gmail.com', 11, ''),
 (30, 'mon', 'mon', 'mon@gmail.com', 11, ''),
 (31, 'mon', 'mon', 'mon@gmail.com', 11, ''),
-(32, 'qq', 'qq', 'q@gmail.com', 22, 'Y');
+(32, 'qq', 'qq', 'q@gmail.com', 22, 'Y'),
+(33, 't', 't', 't@gmail.com', 24, ''),
+(34, 'r', 'r', 'r', 24, 'Y');
 
 -- --------------------------------------------------------
 
@@ -144,6 +146,34 @@ INSERT INTO `data` (`id`, `firstname`, `lastname`, `username`, `email`, `passwor
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dm`
+--
+
+CREATE TABLE `dm` (
+  `dmid` bigint(20) NOT NULL,
+  `title` text NOT NULL,
+  `user1` text NOT NULL,
+  `user2` text NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` text NOT NULL,
+  `user1read` tinyint(1) NOT NULL,
+  `user2read` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dm`
+--
+
+INSERT INTO `dm` (`dmid`, `title`, `user1`, `user2`, `message`, `timestamp`, `user1read`, `user2read`) VALUES
+(1, 'test', 'testtest2@test.com', 'testtest@test.com', 'test', '2020-04-19 21:22:34', 1, 0),
+(2, 'test', 'testtest@test.com', 'testtest@test.com', 'trying this!', '11111', 1, 1),
+(3, 'test', 'testtest@test.com', 'testtest@test.com', 'test2', '2020-04-19 21:22:35', 1, 0),
+(4, 'test title', 'testtest@test.com', 'jrous47@lsu.edu', 'test message', '2020-04-19 23:08:22', 1, 0),
+(5, 'test', 'testtest@test.com', 'jrous47@lsu.edu', 'test', '2020-04-19 23:10:03', 1, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Employee`
 --
 
@@ -203,7 +233,8 @@ INSERT INTO `Job_Opening` (`id`, `name`, `description`, `address`, `company`, `s
 (12, 'Senior Developer', 'Basic Qualifications\r\n• Master’s or Ph.D in Computer Science \r\n• Development, Maintenance, and Troubleshooting in Google Ad Manager (formerly DFP)\r\n• Development and Maintenance of Tools for enhanced trafficking, automation, and Creative previews \r\n• Develop, Debug next level Ad Products that serve on our any of our platforms, on- and off property \r\n• Collaborate with and execute major cross-platform executions as a team, or independently when needed \r\n• Document knowledge and processes specific as it correlates to your work. \r\n• Utilize strong interpersonal skills in working with numerous internal teams and expand personal and team knowledge of new and upcoming products. \r\nPreferred Qualifications\r\n• Ph.D degree preferred, or relevant experience \r\n• A portfolio or links to previous work \r\n• 7 years of experience working in a technical service environment preferably supporting mobile or web-based products \r\n• Demonstrated creative problem-solving and strong analytical skills required \r\n• Demonstrated mastery of Object-Oriented JavaScript, CSS and HTML5 is required \r\n• Experience with Web-based languages, including React.JS and Angular \r\n• Experience with Mobile App-based languages: MRAID is a requirement, Swift and Java are a plus \r\n• Creative experience with Adobe Creative Cloud is a plus \r\n• Working knowledge of Machine Learning & AI is a plus \r\n• Working knowledge of Node.js, Grunt, Gulp, Git, WordPress, and Drupal is a plus \r\n• Strong working knowledge with one or more Internet ad management or targeted marketing applications (e.g., GAM/DFP, 24/7 Real Media, OAS, FreeWheel) \r\n• Demonstrated knowledge of the Programmatic Advertising landscape (Adform, AppNexus, Beeswax, and other DSPs) \r\n• Rich Media Vendor technology experience (e.g., Sizmek, Celtra, Pointroll) \r\n• A passion for creative technology and new media capabilities for advertising \r\n• Ability to absorb complex technical concepts and communicate them to a non-technical audience \r\n• Strong creative, collaboration and communication skills\r\n', '', '', '', '', '2020-03-10 05:00:00', 'Technology', 'LA', 'Master'),
 (21, 'Civil engineer', 'Basic Qualifications\r\n• BS degree in civil engineering. \r\n• 7+ years of structural engineering experience, preferably in a heavy industrial or similar field. Master’s degree and PhD in civil engineering or related field can each be substituted for 1 year of experience. \r\n• Working knowledge of structural analysis software, preferably RISA 3D Primary \r\nPreferred Qualifications\r\n• Intimate knowledge of all design codes related to design and construction of steel and concrete, including but not limited to ASCE 7, AISC Steel Construction Manual, AISC 360, ACI 318, IBC, NFPA Life Safety Code, and applicable OSHA laws & regulations. \r\n• Ability to produce accurate engineering estimates, material takeoff estimates, and schedules. \r\n• Ability to navigate and utilize 3D modeling and point cloud laser scan software. \r\n• Ability to effectively lead and manage projects of various sizes and scope, ensuring that accurate, high quality deliverables are produced on schedule and on budget. \r\n• Demonstrate effective communication and interpersonal skills, with the ability to lead a team, delegate tasks, coordinate with other disciplines, and relate with clients. \r\n• Ability to effectively and efficiently mentor less experienced engineers and designers.\r\n', '', '', '', '', '2020-01-10 06:00:00', 'Engineering', 'WI', 'Bachelor'),
 (22, 'Project Engineer', 'Job Requirements Our client needs an Engineer with project management and experience in all project phases; Definition, Design, Procurement, Construction, and Start-up/Commissioning. In project execution this Project Manager will manage and lead 6-7 projects per year ranging from $200K to $2MM in scope. \r\nBasic Qualifications\r\n• Degree in engineering is required. \r\n• Strong knowledge of process equipment and their functions. \r\n• Knowledge of the different engineering discipline roles. \r\n• Proficient in project management processes. \r\n• Broad technical experience. \r\n• Experience with problem solving / troubleshooting and data analysis. \r\n• Ability to read P&ID’s and instrument loops sheets. \r\n• Experienced in commissioning of new projects within a chemical process. \r\n• Experienced in troubleshooting process and control issues in a fast paced environment. \r\n• Proficiency in Microsoft applications, such as Word and Excel. \r\n• Strong written and verbal communication skills. \r\n• Strong skill set in organization and prioritizing projects and work load. \r\n• Must be a self-starter, who is highly motivated, able to take the initiative on projects, and able to work without supervision. \r\n• Ability to follow processes and procedures, as well as develop and implement them. \r\n• The position requires strong attention to detail, as well as the ability to sit in front of a computer. \r\n• This position requires an employee to be in an office environment as well as exposed to some outside elements; process and warehouse environment. \r\nKey Words: process engineer, chemical design engineer, chemical engineer, development engineer, controls engineer, instrumentation engineer, chemical engineering, process engineer, process control engineer, process development engineer, process controls engineer, instrumentation engineer, chemical engineering, process engineer, process control engineer, ChE, petrochemical, refinery, oil and gas, pharmaceutical, process plant, operations, maintenance\r\n', '', '', '', '', '2020-01-24 06:00:00', 'Engineering', 'LA', 'Bachelor'),
-(23, 'Omg', 'omg', 'i', 'PDVSA', '90', 'omg@gmail.com', '2020-04-20 07:13:08', 'Technology', 'LA', 'Master');
+(23, 'Omg', 'omg', 'i', 'PDVSA', '90', 'omg@gmail.com', '2020-04-20 07:13:08', 'Technology', 'LA', 'Master'),
+(24, 'ii', 'r', 'r', 'r', '80', 't@gmail.com', '2020-04-20 09:01:05', 'Technology', 'LA', 'Master');
 
 -- --------------------------------------------------------
 
@@ -213,8 +244,6 @@ INSERT INTO `Job_Opening` (`id`, `name`, `description`, `address`, `company`, `s
 
 CREATE TABLE `masterlogin` (
   `id` int(11) NOT NULL,
-  `First_Name` varchar(100) NOT NULL,
-  `Last_Name` varchar(100) NOT NULL,
   `username` varchar(15) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(20) NOT NULL,
@@ -225,22 +254,22 @@ CREATE TABLE `masterlogin` (
 -- Dumping data for table `masterlogin`
 --
 
-INSERT INTO `masterlogin` (`id`, `First_Name`, `Last_Name`, `username`, `email`, `password`, `role`) VALUES
-(11, '', '', 'ateam', 'ateam@gmail.com', '123456', 'recruiter'),
-(12, '', '', 'rachel', 'rachel@gmail.com', '1234567', 'employee'),
-(13, '', '', 'hello', 'hello@gmail.com', 'hello123', 'user'),
-(14, '', '', 'tester', 'tester@gmail.com', 'tester123', 'employee'),
-(15, '', '', 'test1', 'test1@gmail.com', 'test12345', 'user'),
-(16, '', '', 'user1', 'user@gmail.com', 'user123', 'user'),
-(17, '', '', 'testt', 'testt@gmail.com', '123456', 'user'),
-(18, '', '', 'testtt', 'testtt@gmail.com', '123456', 'user'),
-(19, '', '', 'hi', 'hi@gmail.com', '123456', 'user'),
-(20, '', '', 'test2', 'test2@gmail.com', '123456', 'employee'),
-(21, '', '', 'username', 'username@gmail.com', '123456', 'user'),
-(22, '', '', 'h', 'h@gmail.com', '123456', 'employee'),
-(23, '', '', 'j', 'j@gmail.com', '123456', 'recruiter'),
-(24, '', '', 'k', 'k@gmail.com', '123456', 'recruiter'),
-(25, '', '', 'user2', 'user2@gmail.com', '123456', 'user');
+INSERT INTO `masterlogin` (`id`, `username`, `email`, `password`, `role`) VALUES
+(11, 'ateam', 'ateam@gmail.com', '123456', 'recruiter'),
+(12, 'rachel', 'rachel@gmail.com', '1234567', 'employee'),
+(13, 'hello', 'hello@gmail.com', 'hello123', 'user'),
+(14, 'tester', 'tester@gmail.com', 'tester123', 'employee'),
+(15, 'test1', 'test1@gmail.com', 'test12345', 'user'),
+(16, 'user1', 'user@gmail.com', 'user123', 'user'),
+(17, 'testt', 'testt@gmail.com', '123456', 'user'),
+(18, 'testtt', 'testtt@gmail.com', '123456', 'user'),
+(19, 'hi', 'hi@gmail.com', '123456', 'user'),
+(20, 'test2', 'test2@gmail.com', '123456', 'employee'),
+(21, 'username', 'username@gmail.com', '123456', 'user'),
+(22, 'h', 'h@gmail.com', '123456', 'employee'),
+(23, 'j', 'j@gmail.com', '123456', 'recruiter'),
+(24, 'k', 'k@gmail.com', '123456', 'recruiter'),
+(25, 'user2', 'user2@gmail.com', '123456', 'user');
 
 -- --------------------------------------------------------
 
@@ -305,6 +334,12 @@ ALTER TABLE `data`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `dm`
+--
+ALTER TABLE `dm`
+  ADD PRIMARY KEY (`dmid`);
+
+--
 -- Indexes for table `Employee`
 --
 ALTER TABLE `Employee`
@@ -342,7 +377,7 @@ ALTER TABLE `Search_Committee`
 -- AUTO_INCREMENT for table `Applicants`
 --
 ALTER TABLE `Applicants`
-  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `Applicants_ID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `Association`
@@ -363,6 +398,12 @@ ALTER TABLE `data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `dm`
+--
+ALTER TABLE `dm`
+  MODIFY `dmid` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `Employee`
 --
 ALTER TABLE `Employee`
@@ -372,7 +413,7 @@ ALTER TABLE `Employee`
 -- AUTO_INCREMENT for table `Job_Opening`
 --
 ALTER TABLE `Job_Opening`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `masterlogin`
