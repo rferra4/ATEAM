@@ -2,7 +2,7 @@
   include 'inc/uheader.php';
 ?>
 <center>
- <h1>Read a PM</h1>
+ <h1>Send a PM</h1>
 
  <h3>
    <?php include 'inc/ufooter.php'; ?>
