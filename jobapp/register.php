@@ -13,10 +13,10 @@ require_once "connection.php";
 if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set this
 {
  $username = $_REQUEST['txt_username']; //textbox name "txt_username"
-
  $email  = $_REQUEST['txt_email']; //textbox name "txt_email"
  $password = $_REQUEST['txt_password']; //textbox name "txt_password"
  $role  = $_REQUEST['txt_role']; //select option name "txt_role"
+
 
  if(empty($username)){
   $errorMsg[]="Please enter username"; //check username textbox not empty or null
@@ -56,11 +56,17 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
 
    else if(!isset($errorMsg))
    {
-    $insert_stmt=$db->prepare("INSERT INTO masterlogin(username,email,password,role) VALUES(:uname,:uemail,:upassword,:urole)"); //sql insert query
+    $file = rand(1000,100000)."-".$_FILES['file']['name'];
+    $file_loc = $_FILES['file']['tmp_name'];
+  	$folder="uploads/";
+    move_uploaded_file($file_loc,$folder.$file);
+
+    $insert_stmt=$db->prepare("INSERT INTO masterlogin(username,email,password,role,file_name) VALUES(:uname,:uemail,:upassword,:urole,:ufile)"); //sql insert query
     $insert_stmt->bindParam(":uname",$username);
     $insert_stmt->bindParam(":uemail",$email);     //bind all parameter
     $insert_stmt->bindParam(":upassword",$password);
     $insert_stmt->bindParam(":urole",$role);
+    $insert_stmt->bindParam(":ufile",$file);
 
     if($insert_stmt->execute())
     {
@@ -86,22 +92,32 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
     </div>
 
 
-      <!---------------------------------------------------------------------------------------------------->
-      <!-- USER Form Box -->
-      <!---------------------------------------------------------------------------------------------------->
-      <form id ="USER" class="input-group" method="post"  >
 
-      <h3 class="register-title">User Registration</h3>
-        <input type="text" name="txt_firstname" class="input-field" placeholder="First Name" />
-        <input type="text" name="txt_lastname" class="input-field" placeholder="Last Name" />
+
+
+
+
+
+
+
+
+
+      <!---------------------------------------------------------------------------------------------------->
+      <!-- EMPLOYEE Form Box -->
+      <!---------------------------------------------------------------------------------------------------->
+      <form id ="USER" class="input-group" method="post" enctype="multipart/form-data" action="register.php">
+
+      <h3 class="input-field-title">User Registration</h3>
+
         <input type="text" name="txt_username" class="input-field" placeholder="Username" />
         <input type="text" name="txt_email" class="input-field" placeholder="Email" />
         <input type="password" name="txt_password" class="input-field" placeholder="Password" />
-        <input type="checkbox" class="check-box-user" name = "txt_role" value = "user"><span class="terms-text">I agree to the terms & conditions</span>
+        <input type="file" name="file" />
 
-        <input type="file" name="resume"class="resume-btn"  hidden="hidden">
-        <button type="button"class="resume-btn">Upload Resume</button>
-        <span class="resume-btn-text">No file chosen, yet.</span>
+
+
+        <!--<button type="button"class="resume-btn">Upload Resume</button>
+        <span class="resume-btn-text">No file chosen, yet.</span>-->
 
               <!--<select class="input-field" name="txt_role">
                <option value="" selected="selected"> - select role - </option>
@@ -109,8 +125,9 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
                <option value="user">User</option>
                <option value="recruiter">Recruiter</option>
              </select> -->
+       <input type="checkbox" class="check-box" name = "txt_role" value = "user"> <span>I agree to the terms & conditions</span>
 
-       <input type="submit"  name="btn_register" class="submit-btn-user" value="Register">
+       <input type="submit"  name="btn_register" class="submit-btn" value="Register">
 
 
        <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
@@ -122,7 +139,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
       <!-- EMPLOYEE Form Box -->
       <!---------------------------------------------------------------------------------------------------->
       <form id ="EMPLOYEE" class="input-group" method="post" >
-      <h3 class="register-title">Employee Registration</h3>
+      <h3 class="input-field-title">Employee Registration</h3>
         <input type="text" name="txt_firstname" class="input-field" placeholder="First Name" />
         <input type="text" name="txt_lastname" class="input-field" placeholder="Last Name" />
         <input type="text" name="txt_username" class="input-field" placeholder="Username" />
@@ -136,7 +153,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
                <option value="recruiter">Recruiter</option>
              </select> -->
 
-       <input type="checkbox" class="check-box" name = "txt_role" value = "employee"> <span class="terms-text">I agree to the terms & conditions</span>
+       <input type="checkbox" class="check-box" name = "txt_role" value = "employee"> <span>I agree to the terms & conditions</span>
        <input type="submit"  name="btn_register" class="submit-btn" value="Register">
 
        <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
@@ -146,7 +163,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
       <!-- RECRUITER Form Box -->
       <!---------------------------------------------------------------------------------------------------->
       <form id ="RECRUITER" class = "input-group" method="post" >
-      <h3 class="register-title">Recruiter Registration</h3>
+      <h3 class="input-field-title">Recruiter Registration</h3>
         <input type="text" name="txt_firstname" class="input-field" placeholder="First Name" />
         <input type="text" name="txt_lastname" class="input-field" placeholder="Last Name" />
         <input type="text" name="txt_username" class="input-field" placeholder="Username" />
@@ -158,7 +175,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
                <option value="user">User</option>
                <option value="recruiter">Recruiter</option>
              </select> -->
-       <input type="checkbox" class="check-box" name = "txt_role" value = "recruiter"> <span class="terms-text">I agree to the terms & conditions</span>
+       <input type="checkbox" class="check-box" name = "txt_role" value = "recruiter"> <span>I agree to the terms & conditions</span>
        <input type="submit"  name="btn_register" class="submit-btn" value="Register">
 
        <p class = "link"> Already have an account? <a href="index.php">Login Here</a></p>
@@ -204,7 +221,7 @@ if(isset($_REQUEST['btn_register'])) //check button name "btn_register" and set 
     const customText = document.getElementById("custom-text");
 
     resumeBtn.addEventListener("click", function(){
-        resumeFile.click();
+        resumeFile.change();
     });
 
     resumeFile.addEventListener("change", function(){
