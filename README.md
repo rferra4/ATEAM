@@ -8,8 +8,8 @@ JOB BOARD (by ATEAM)
 	- As a recruiter, one can create, update, and delete job listings, view and manage applicants to their posted listings (not implemented fully), as well as run an administrative report that details how the company is doing in recruiting and hiring.  The administrative populates stats such as: count of applications submitted to each job, percentage of employees accepted for each hiring company, etc.  
 
   HOW TO RUN:
-  - Download our project_schema.sql file and upload it into Database
-  - In the following files change your Database name (if not using the name project_schema), username, and password:
+  - Download our project_schema.sql file and upload it into your database
+  - In the following files change your database name (if not using the name project_schema), username, and password:
     - config/app_config.php
     - config/config.php
     - connection.php
